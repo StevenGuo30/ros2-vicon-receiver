@@ -69,6 +69,42 @@ bool Communicator::disconnect() {
 }
 
 bool is_first_frame = true;
+std::vector<std::size_t> marker_count_total;
+
+int findMajorityElement(std::vector<int> &nums) {
+  // If the size of the array is greater than 120, keep only the last 120 elements
+  if (nums.size() > 120) {
+    nums.erase(nums.begin(), nums.end() - 120);
+  }
+
+  int majority = nums[0];
+  int count = 1;
+  for (int i = 1; i < nums.size(); i++) {
+    if (count == 0) {
+      majority = nums[i];
+      count = 1;
+    } else if (majority == nums[i]) {
+      count++;
+    } else {
+      count--;
+    }
+  }
+
+  // Verify if the found majority element is actually the majority
+  count = 0;
+  for (int num : nums) {
+    if (num == majority) {
+      count++;
+    }
+  }
+
+  // If no majority element found, return the most recently stored element
+  if (count <= nums.size() / 2) {
+    return nums.back();
+  }
+
+  return majority;
+}
 
 // Calculate the time difference between two timecodes
 double CalculateDeltaTime(const Output_GetTimecode& current, const Output_GetTimecode& previous) {
@@ -99,6 +135,10 @@ void Communicator::get_frame() {
   Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
   Output_GetTimecode timecode = vicon_client.GetTimecode();
   std::size_t marker_count = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
+  marker_count_total.push_back(marker_count); // store marker count for majority element calculation
+
+  // get the majority element of the marker count
+  int marker_count = findMajorityElement(marker_count_total);
 
   MarkersStruct current_markers(marker_count, frame_number.FrameNumber);
   for (std::size_t i = 0; i < marker_count; i++) {

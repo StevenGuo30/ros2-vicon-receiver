@@ -42,6 +42,8 @@ public:
   void create_publisher(const string subject_name, const string segment_name);
   void create_publisher_thread(const string subject_name,
                                const string segment_name);
+  int findMajorityElement(const std::vector<int> &nums);
+  double CalculateDeltaTime(const Output_GetTimecode& current, const Output_GetTimecode& previous);
 };
 
 } // namespace UnlabeledMarker

@@ -1,4 +1,4 @@
-#include "vicon_unlabeled_marker_receiver/publisher.hpp"
+#include "vicon_unlabeled_marker_receiver_mock/publisher.hpp"
 
 namespace ViconReceiver {
 namespace UnlabeledMarker {

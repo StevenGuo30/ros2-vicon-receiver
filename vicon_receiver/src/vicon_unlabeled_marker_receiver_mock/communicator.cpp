@@ -1,4 +1,4 @@
-#include "vicon_unlabeled_marker_receiver/communicator.hpp"
+#include "vicon_unlabeled_marker_receiver_mock/communicator.hpp"
 
 using namespace ViconDataStreamSDK::CPP;
 

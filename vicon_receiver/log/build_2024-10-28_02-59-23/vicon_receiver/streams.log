@@ -1,0 +1,172 @@
+[0.030s] Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver -- -j8 -l8
+[0.136s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.184s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.184s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.548s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.552s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.563s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.830s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.867s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.964s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.968s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.267s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.684s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.835s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.853s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.879s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.879s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.909s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.909s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.909s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[2.263s] -- Using numpy include directory: /usr/local/lib/python3.8/dist-packages/numpy/core/include
+[2.276s] -- Found rmw_fastrtps_cpp: 1.3.2 (/opt/ros/foxy/share/rmw_fastrtps_cpp/cmake)
+[2.446s] -- Configuring done
+[2.532s] -- Generating done
+[2.541s] -- Build files have been written to: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver
+[2.577s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.594s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.206s] [  4%] Built target vicon_receiver__cpp
+[3.222s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_generator_c[0m
+[3.222s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.223s] [  8%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.224s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[3.240s] [ 12%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_generator_c.dir/rosidl_generator_c/vicon_receiver/msg/detail/posture__functions.c.o[0m
+[3.240s] [ 14%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_generator_c.dir/rosidl_generator_c/vicon_receiver/msg/detail/markers_list__functions.c.o[0m
+[3.400s] [ 16%] [32m[1mLinking C shared library libvicon_receiver__rosidl_generator_c.so[0m
+[3.452s] [ 16%] Built target vicon_receiver__rosidl_generator_c
+[3.468s] [ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.468s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.837s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_cpp[0m
+[3.855s] [ 22%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vicon_receiver/msg/markers_list__type_support.cpp.o[0m
+[3.855s] [ 24%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vicon_receiver/msg/posture__type_support.cpp.o[0m
+[3.887s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_introspection_cpp[0m
+[3.913s] [ 26%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vicon_receiver/msg/detail/posture__type_support.cpp.o[0m
+[3.916s] [ 28%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vicon_receiver/msg/detail/markers_list__type_support.cpp.o[0m
+[3.919s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_fastrtps_cpp[0m
+[3.943s] [ 30%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vicon_receiver/msg/detail/dds_fastrtps/posture__type_support.cpp.o[0m
+[3.957s] [ 32%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vicon_receiver/msg/detail/dds_fastrtps/markers_list__type_support.cpp.o[0m
+[4.156s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_c[0m
+[4.184s] [ 34%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_c.dir/rosidl_typesupport_c/vicon_receiver/msg/posture__type_support.cpp.o[0m
+[4.270s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_introspection_c[0m
+[4.304s] [ 36%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vicon_receiver/msg/detail/posture__type_support.c.o[0m
+[4.399s] [ 38%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_c.dir/rosidl_typesupport_c/vicon_receiver/msg/markers_list__type_support.cpp.o[0m
+[4.470s] [ 40%] [32m[1mLinking CXX shared library libvicon_receiver__rosidl_typesupport_c.so[0m
+[4.499s] [ 42%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vicon_receiver/msg/detail/markers_list__type_support.c.o[0m
+[4.658s] [ 44%] [32m[1mLinking C shared library libvicon_receiver__rosidl_typesupport_introspection_c.so[0m
+[4.661s] [ 44%] Built target vicon_receiver__rosidl_typesupport_c
+[4.757s] [ 44%] Built target vicon_receiver__rosidl_typesupport_introspection_c
+[4.850s] [ 46%] [32m[1mLinking CXX shared library libvicon_receiver__rosidl_typesupport_cpp.so[0m
+[4.908s] [ 46%] Built target vicon_receiver__rosidl_typesupport_cpp
+[5.012s] [ 48%] [32m[1mLinking CXX shared library libvicon_receiver__rosidl_typesupport_introspection_cpp.so[0m
+[5.112s] [ 48%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp
+[5.279s] [ 51%] [32m[1mLinking CXX shared library libvicon_receiver__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.385s] [ 51%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp
+[5.402s] [ 53%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.954s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_fastrtps_c[0m
+[5.970s] [ 55%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vicon_receiver/msg/detail/posture__type_support_c.cpp.o[0m
+[5.970s] [ 57%] [32mBuilding CXX object CMakeFiles/vicon_receiver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vicon_receiver/msg/detail/markers_list__type_support_c.cpp.o[0m
+[6.515s] [ 59%] [32m[1mLinking CXX shared library libvicon_receiver__rosidl_typesupport_fastrtps_c.so[0m
+[6.636s] [ 59%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c
+[6.663s] [ 59%] Built target vicon_receiver
+[6.682s] [35m[1mScanning dependencies of target vicon_client_unlabeled[0m
+[6.685s] [35m[1mScanning dependencies of target vicon_client[0m
+[6.686s] [35m[1mScanning dependencies of target vicon_client_mock[0m
+[6.707s] [ 61%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.738s] [ 63%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/publisher.cpp.o[0m
+[6.739s] [ 65%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o[0m
+[6.745s] [ 67%] [32mBuilding CXX object CMakeFiles/vicon_client.dir/src/vicon_receiver/publisher.cpp.o[0m
+[6.745s] [ 69%] [32mBuilding CXX object CMakeFiles/vicon_client.dir/src/vicon_receiver/communicator.cpp.o[0m
+[6.748s] [ 71%] [32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/data.cpp.o[0m
+[6.753s] [ 73%] [32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/communicator.cpp.o[0m
+[6.758s] [ 75%] [32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/publisher.cpp.o[0m
+[8.671s] [ 75%] Built target vicon_receiver__py
+[8.698s] [35m[1mScanning dependencies of target vicon_receiver__python[0m
+[8.734s] [ 77%] [32mBuilding C object CMakeFiles/vicon_receiver__python.dir/rosidl_generator_py/vicon_receiver/msg/_posture_s.c.o[0m
+[9.134s] [ 79%] [32mBuilding C object CMakeFiles/vicon_receiver__python.dir/rosidl_generator_py/vicon_receiver/msg/_markers_list_s.c.o[0m
+[10.475s] [ 81%] [32m[1mLinking C shared library rosidl_generator_py/vicon_receiver/libvicon_receiver__python.so[0m
+[10.982s] [ 81%] Built target vicon_receiver__python
+[11.034s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_introspection_c__pyext[0m
+[11.148s] [ 83%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/vicon_receiver/_vicon_receiver_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[13.676s] [ 85%] [32m[1mLinking C shared library rosidl_generator_py/vicon_receiver/vicon_receiver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[13.779s] [ 85%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext
+[14.169s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_c__pyext[0m
+[14.962s] [ 87%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/vicon_receiver/_vicon_receiver_s.ep.rosidl_typesupport_c.c.o[0m
+[15.666s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/vicon_receiver/vicon_receiver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[16.162s] [ 89%] Built target vicon_receiver__rosidl_typesupport_c__pyext
+[16.361s] [35m[1mScanning dependencies of target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext[0m
+[16.489s] [ 91%] [32mBuilding C object CMakeFiles/vicon_receiver__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/vicon_receiver/_vicon_receiver_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[19.644s] [ 93%] [32m[1mLinking CXX shared library rosidl_generator_py/vicon_receiver/vicon_receiver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[20.577s] [ 93%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext
+[29.189s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[29.190s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:46:29:[m[K [01;31m[Kerror: [m[K‘[01m[KOutput_GetTimecode[m[K’ has not been declared
+[29.190s]    46 |   double CalculateDeltaTime([01;31m[KOutput_GetTimecode[m[K& current, Output_GetTimecode& previous);
+[29.190s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[29.191s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:46:58:[m[K [01;31m[Kerror: [m[K‘[01m[KOutput_GetTimecode[m[K’ has not been declared
+[29.191s]    46 |   double CalculateDeltaTime(Output_GetTimecode& current, [01;31m[KOutput_GetTimecode[m[K& previous);
+[29.191s]       |                                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[29.217s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In function ‘[01m[Kint ViconReceiver::UnlabeledMarker::findMajorityElement(std::vector<int>&)[m[K’:
+[29.217s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:82:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[29.217s]    82 |   for (int i = 1; [01;35m[Ki < nums.size()[m[K; i++) {
+[29.218s]       |                   [01;35m[K~~^~~~~~~~~~~~~[m[K
+[29.219s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:102:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[29.219s]   102 |   if ([01;35m[Kcount <= nums.size() / 2[m[K) {
+[29.220s]       |       [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[29.220s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In function ‘[01m[Kdouble ViconReceiver::UnlabeledMarker::CalculateDeltaTime(ViconDataStreamSDK::CPP::Output_GetTimecode&, ViconDataStreamSDK::CPP::Output_GetTimecode&)[m[K’:
+[29.220s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:116:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ViconDataStreamSDK::CPP::Output_GetTimecode[m[K’ has no member named ‘[01m[KFramesPerSecond[m[K’
+[29.220s]   116 |         delta_frames += current.[01;31m[KFramesPerSecond[m[K;
+[29.220s]       |                                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[29.221s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:121:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ViconDataStreamSDK::CPP::Output_GetTimecode[m[K’ has no member named ‘[01m[KFramesPerSecond[m[K’
+[29.221s]   121 |                         + static_cast<double>(delta_frames) / current.[01;31m[KFramesPerSecond[m[K;
+[29.221s]       |                                                                       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[29.222s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kvoid ViconReceiver::UnlabeledMarker::Communicator::get_frame()[m[K’:
+[29.222s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:141:7:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kint marker_count[m[K’
+[29.222s]   141 |   int [01;31m[Kmarker_count[m[K = findMajorityElement(marker_count_total);
+[29.222s]       |       [01;31m[K^~~~~~~~~~~~[m[K
+[29.222s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:137:15:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kstd::size_t marker_count[m[K’
+[29.222s]   137 |   std::size_t [01;36m[Kmarker_count[m[K = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
+[29.222s]       |               [01;36m[K^~~~~~~~~~~~[m[K
+[29.223s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:141:42:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::vector<long unsigned int>[m[K’ to ‘[01m[Kconst std::vector<int>&[m[K’
+[29.223s]   141 |   int marker_count = findMajorityElement([01;31m[Kmarker_count_total[m[K);
+[29.223s]       |                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[29.234s]       |                                          [01;31m[K|[m[K
+[29.235s]       |                                          [01;31m[Kstd::vector<long unsigned int>[m[K
+[29.235s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[29.235s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:45:51:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint ViconReceiver::UnlabeledMarker::Communicator::findMajorityElement(const std::vector<int>&)[m[K’
+[29.236s]    45 |   int findMajorityElement([01;36m[Kconst std::vector<int> &nums[m[K);
+[29.236s]       |                           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[29.236s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:153:17:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct()[m[K’
+[29.236s]   153 |   MarkersStruct [01;31m[Kprev_markers[m[K;
+[29.236s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[29.237s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:6[m[K,
+[29.237s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[29.237s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:13:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(std::size_t, unsigned int)[m[K’
+[29.237s]    13 |   [01;36m[KMarkersStruct[m[K(std::size_t size, unsigned int frame_number)
+[29.237s]       |   [01;36m[K^~~~~~~~~~~~~[m[K
+[29.237s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:13:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[29.238s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(const ViconReceiver::UnlabeledMarker::MarkersStruct&)[m[K’
+[29.238s]    11 | struct [01;36m[KMarkersStruct[m[K {
+[29.238s]       |        [01;36m[K^~~~~~~~~~~~~[m[K
+[29.238s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[29.239s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(ViconReceiver::UnlabeledMarker::MarkersStruct&&)[m[K’
+[29.239s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[29.239s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:157:44:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KViconDataStreamSDK::CPP::Output_GetTimecode[m[K’ to ‘[01m[Kint&[m[K’
+[29.239s]   157 |     double delta_time = CalculateDeltaTime([01;31m[Ktimecode[m[K, prev_timecode);
+[29.239s]       |                                            [01;31m[K^~~~~~~~[m[K
+[29.239s]       |                                            [01;31m[K|[m[K
+[29.239s]       |                                            [01;31m[KViconDataStreamSDK::CPP::Output_GetTimecode[m[K
+[29.239s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[29.239s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:46:49:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kdouble ViconReceiver::UnlabeledMarker::Communicator::CalculateDeltaTime(int&, int&)[m[K’
+[29.240s]    46 |   double CalculateDeltaTime([01;36m[KOutput_GetTimecode& current[m[K, Output_GetTimecode& previous);
+[29.240s]       |                             [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[29.240s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:166:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kspeed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[29.240s]   166 |         double [01;35m[Kspeed[m[K = sqrt(dx * dx + dy * dy + dz * dz) / delta_time;
+[29.240s]       |                [01;35m[K^~~~~[m[K
+[31.657s] make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:63: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o] Error 1
+[31.659s] make[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/vicon_client_unlabeled.dir/all] Error 2
+[31.659s] make[1]: *** Waiting for unfinished jobs....
+[32.814s] [ 97%] [32m[1mLinking CXX executable vicon_client_mock[0m
+[32.814s] [ 97%] [32m[1mLinking CXX executable vicon_client[0m
+[33.335s] [ 97%] Built target vicon_client_mock
+[33.347s] [ 97%] Built target vicon_client
+[33.351s] make: *** [Makefile:141: all] Error 2
+[33.378s] Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver -- -j8 -l8

@@ -1,0 +1,20 @@
+[0.031s] Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver -- -j8 -l8
+[0.099s] [  8%] Built target vicon_receiver__cpp
+[0.099s] [ 10%] Built target vicon_receiver__rosidl_generator_c
+[0.136s] [ 26%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp
+[0.136s] [ 26%] Built target vicon_receiver__rosidl_typesupport_introspection_c
+[0.138s] [ 36%] Built target vicon_receiver__rosidl_typesupport_c
+[0.138s] [ 42%] Built target vicon_receiver__rosidl_typesupport_cpp
+[0.143s] [ 51%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp
+[0.179s] [ 59%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c
+[0.205s] [ 59%] Built target vicon_receiver
+[0.230s] [35m[1mScanning dependencies of target vicon_client_unlabeled[0m
+[0.237s] [ 61%] Built target vicon_receiver__py
+[0.260s] [ 67%] Built target vicon_client
+[0.261s] [ 75%] Built target vicon_client_mock
+[0.269s] [ 77%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o[0m
+[0.280s] [ 83%] Built target vicon_receiver__python
+[0.318s] [ 87%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext
+[0.319s] [ 91%] Built target vicon_receiver__rosidl_typesupport_c__pyext
+[0.319s] [ 95%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext
+[4.764s] Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver -- -j8 -l8

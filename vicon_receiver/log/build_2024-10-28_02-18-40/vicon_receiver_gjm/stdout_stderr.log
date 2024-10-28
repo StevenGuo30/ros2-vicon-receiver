@@ -1,0 +1,23 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file
+  'vicon_receiver/msg/Posture.msg' doesn't exist relative to the
+  CMAKE_CURRENT_SOURCE_DIR
+  '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver'
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (rosidl_generate_interfaces)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm/CMakeFiles/CMakeOutput.log".
+See also "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm/CMakeFiles/CMakeError.log".
+make: *** [Makefile:1240: cmake_check_build_system] Error 1

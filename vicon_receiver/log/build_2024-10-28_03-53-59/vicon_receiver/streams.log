@@ -1,0 +1,70 @@
+[0.031s] Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver -- -j8 -l8
+[0.097s] [  2%] Built target vicon_receiver__cpp
+[0.098s] [ 10%] Built target vicon_receiver__rosidl_generator_c
+[0.137s] [ 30%] Built target vicon_receiver__rosidl_typesupport_introspection_c
+[0.137s] [ 34%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp
+[0.138s] [ 34%] Built target vicon_receiver__rosidl_typesupport_cpp
+[0.138s] [ 42%] Built target vicon_receiver__rosidl_typesupport_c
+[0.140s] [ 51%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp
+[0.177s] [ 59%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c
+[0.202s] [ 59%] Built target vicon_receiver
+[0.222s] [35m[1mScanning dependencies of target vicon_client_unlabeled[0m
+[0.234s] [ 61%] Built target vicon_receiver__py
+[0.246s] [ 75%] Built target vicon_client
+[0.247s] [ 75%] Built target vicon_client_mock
+[0.257s] [ 77%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o[0m
+[0.271s] [ 83%] Built target vicon_receiver__python
+[0.307s] [ 95%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext
+[0.307s] [ 95%] Built target vicon_receiver__rosidl_typesupport_c__pyext
+[0.308s] [ 95%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext
+[3.479s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In function ‘[01m[Kint ViconReceiver::UnlabeledMarker::findMajorityElement(std::vector<long unsigned int>&)[m[K’:
+[3.479s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:83:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.479s]    83 |   for (int i = 1; [01;35m[Ki < nums.size()[m[K; i++) {
+[3.480s]       |                   [01;35m[K~~^~~~~~~~~~~~~[m[K
+[3.480s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:87:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<long unsigned int>, long unsigned int>::value_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.480s]    87 |     } else if (majority == nums[i]) {
+[3.480s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:103:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[3.480s]   103 |   if ([01;35m[Kcount <= nums.size() / 2[m[K) {
+[3.480s]       |       [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[3.480s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In function ‘[01m[Kdouble ViconReceiver::UnlabeledMarker::CalculateDeltaTime(ViconDataStreamSDK::CPP::Output_GetTimecode&, ViconDataStreamSDK::CPP::Output_GetTimecode&)[m[K’:
+[3.480s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:122:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ViconDataStreamSDK::CPP::Output_GetTimecode[m[K’ has no member named ‘[01m[KFramesPerSecond[m[K’
+[3.480s]   122 |                         + (delta_frames) / current.[01;31m[KFramesPerSecond[m[K;
+[3.480s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.481s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kvoid ViconReceiver::UnlabeledMarker::Communicator::get_frame()[m[K’:
+[3.481s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:142:7:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kint marker_count[m[K’
+[3.482s]   142 |   int [01;31m[Kmarker_count[m[K = findMajorityElement(marker_count_total);
+[3.482s]       |       [01;31m[K^~~~~~~~~~~~[m[K
+[3.482s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:138:15:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kstd::size_t marker_count[m[K’
+[3.482s]   138 |   std::size_t [01;36m[Kmarker_count[m[K = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
+[3.482s]       |               [01;36m[K^~~~~~~~~~~~[m[K
+[3.482s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:142:42:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::vector<long unsigned int>[m[K’ to ‘[01m[Kconst std::vector<int>&[m[K’
+[3.482s]   142 |   int marker_count = findMajorityElement([01;31m[Kmarker_count_total[m[K);
+[3.482s]       |                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.482s]       |                                          [01;31m[K|[m[K
+[3.482s]       |                                          [01;31m[Kstd::vector<long unsigned int>[m[K
+[3.482s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[3.483s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:46:51:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kint ViconReceiver::UnlabeledMarker::Communicator::findMajorityElement(const std::vector<int>&)[m[K’
+[3.483s]    46 |   int findMajorityElement([01;36m[Kconst std::vector<int> &nums[m[K);
+[3.483s]       |                           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.483s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:154:17:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct()[m[K’
+[3.483s]   154 |   MarkersStruct [01;31m[Kprev_markers[m[K;
+[3.483s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[3.483s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:6[m[K,
+[3.483s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[3.483s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:13:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(std::size_t, unsigned int)[m[K’
+[3.483s]    13 |   [01;36m[KMarkersStruct[m[K(std::size_t size, unsigned int frame_number)
+[3.483s]       |   [01;36m[K^~~~~~~~~~~~~[m[K
+[3.483s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:13:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[3.484s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(const ViconReceiver::UnlabeledMarker::MarkersStruct&)[m[K’
+[3.484s]    11 | struct [01;36m[KMarkersStruct[m[K {
+[3.484s]       |        [01;36m[K^~~~~~~~~~~~~[m[K
+[3.484s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.484s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(ViconReceiver::UnlabeledMarker::MarkersStruct&&)[m[K’
+[3.484s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[3.484s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:167:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kspeed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[3.484s]   167 |         double [01;35m[Kspeed[m[K = sqrt(dx * dx + dy * dy + dz * dz) / delta_time;
+[3.484s]       |                [01;35m[K^~~~~[m[K
+[4.483s] make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:63: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o] Error 1
+[4.483s] make[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/vicon_client_unlabeled.dir/all] Error 2
+[4.483s] make: *** [Makefile:141: all] Error 2
+[4.487s] Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver -- -j8 -l8

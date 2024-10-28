@@ -1,0 +1,5 @@
+source;share/vicon_receiver_gjm/local_setup.bash
+source;share/vicon_receiver_gjm/local_setup.dsv
+source;share/vicon_receiver_gjm/local_setup.ps1
+source;share/vicon_receiver_gjm/local_setup.sh
+source;share/vicon_receiver_gjm/local_setup.zsh

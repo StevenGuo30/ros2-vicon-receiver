@@ -1,0 +1,58 @@
+[0.000000] (-) TimerEvent: {}
+[0.000243] (vicon_receiver_gjm) JobQueued: {'identifier': 'vicon_receiver_gjm', 'dependencies': OrderedDict()}
+[0.000333] (vicon_receiver_gjm) JobStarted: {'identifier': 'vicon_receiver_gjm'}
+[0.019164] (vicon_receiver_gjm) JobProgress: {'identifier': 'vicon_receiver_gjm', 'progress': 'cmake'}
+[0.021079] (vicon_receiver_gjm) JobProgress: {'identifier': 'vicon_receiver_gjm', 'progress': 'build'}
+[0.022233] (vicon_receiver_gjm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm', '--', '-j8', '-l8'], 'cwd': '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm', 'env': OrderedDict([('WS', '/vicon_ws'), ('HOSTNAME', '1cb5f868ed4c'), ('GIT_ASKPASS', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/vicon_ws/install/vicon_receiver/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/vicon_GJM_test/ros2-vicon-receiver'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-25c155c9-f969-435c-913d-5216409ed7ea.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/vicon_GJM_test/ros2-vicon-receiver/install:/vicon_ws/install'), ('ROS_DISTRO', 'foxy'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock","/tmp/.X11-unix/X5"]'), ('DISPLAY', ':5'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e669ff0355.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('AMENT_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy'), ('DEBIAN_FRONTEND', 'noninteractive'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/vicon_ws/install/vicon_receiver/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy')]), 'shell': False}
+[0.075504] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.096997] (-) TimerEvent: {}
+[0.102697] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.102902] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.198197] (-) TimerEvent: {}
+[0.299135] (-) TimerEvent: {}
+[0.331281] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.334032] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.338445] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.399999] (-) TimerEvent: {}
+[0.501079] (-) TimerEvent: {}
+[0.525992] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.556668] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.602090] (-) TimerEvent: {}
+[0.631288] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.633672] (vicon_receiver_gjm) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.703234] (-) TimerEvent: {}
+[0.804087] (-) TimerEvent: {}
+[0.879329] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.905164] (-) TimerEvent: {}
+[1.006178] (-) TimerEvent: {}
+[1.023845] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.107146] (-) TimerEvent: {}
+[1.152221] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.161146] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.188804] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[1.189347] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.208167] (-) TimerEvent: {}
+[1.214053] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.214225] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.214383] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.309096] (-) TimerEvent: {}
+[1.410054] (-) TimerEvent: {}
+[1.435283] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using numpy include directory: /usr/local/lib/python3.8/dist-packages/numpy/core/include\n'}
+[1.448823] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 1.3.2 (/opt/ros/foxy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.511156] (-) TimerEvent: {}
+[1.593984] (vicon_receiver_gjm) StderrLine: {'line': b'CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:40 (message):\n'}
+[1.594208] (vicon_receiver_gjm) StderrLine: {'line': b"  rosidl_target_interfaces() the second argument 'vicon_receiver_gjm' must be\n"}
+[1.594291] (vicon_receiver_gjm) StderrLine: {'line': b'  a valid target name\n'}
+[1.594362] (vicon_receiver_gjm) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.594430] (vicon_receiver_gjm) StderrLine: {'line': b'  CMakeLists.txt:67 (rosidl_target_interfaces)\n'}
+[1.594497] (vicon_receiver_gjm) StderrLine: {'line': b'\n'}
+[1.594564] (vicon_receiver_gjm) StderrLine: {'line': b'\n'}
+[1.596710] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.596824] (vicon_receiver_gjm) StdoutLine: {'line': b'See also "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm/CMakeFiles/CMakeOutput.log".\n'}
+[1.596902] (vicon_receiver_gjm) StdoutLine: {'line': b'See also "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm/CMakeFiles/CMakeError.log".\n'}
+[1.605960] (vicon_receiver_gjm) StderrLine: {'line': b'make: *** [Makefile:1240: cmake_check_build_system] Error 1\n'}
+[1.607942] (vicon_receiver_gjm) CommandEnded: {'returncode': 2}
+[1.612031] (-) TimerEvent: {}
+[1.712985] (-) TimerEvent: {}
+[1.745960] (vicon_receiver_gjm) JobEnded: {'identifier': 'vicon_receiver_gjm', 'rc': 2}
+[1.757692] (-) EventReactorShutdown: {}

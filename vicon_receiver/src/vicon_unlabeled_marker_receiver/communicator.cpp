@@ -5,6 +5,9 @@ using namespace ViconDataStreamSDK::CPP;
 namespace ViconReceiver {
 namespace UnlabeledMarker {
 
+bool is_first_frame = true;
+std::vector<std::size_t> marker_count_total;
+
 Communicator::Communicator() : Node("vicon_unlabeled_markers") {
   // get parameters
   this->declare_parameter<std::string>("hostname", "127.0.0.1");
@@ -68,10 +71,7 @@ bool Communicator::disconnect() {
   return false;
 }
 
-bool is_first_frame = true;
-std::vector<std::size_t> marker_count_total;
-
-int findMajorityElement(std::vector<int> &nums) {
+int findMajorityElement(std::vector<std::size_t>& nums) {
   // If the size of the array is greater than 120, keep only the last 120 elements
   if (nums.size() > 120) {
     nums.erase(nums.begin(), nums.end() - 120);
@@ -107,21 +107,25 @@ int findMajorityElement(std::vector<int> &nums) {
 }
 
 // Calculate the time difference between two timecodes
-double CalculateDeltaTime(const Output_GetTimecode& current, const Output_GetTimecode& previous) {
-    int delta_seconds = static_cast<int>(current.Seconds) - static_cast<int>(previous.Seconds);
+double CalculateDeltaTime(Output_GetTimecode& current, Output_GetTimecode& previous) {
+    int delta_seconds = (current.Seconds) - (previous.Seconds);
     
-    int delta_frames = static_cast<int>(current.Frames) - static_cast<int>(previous.Frames);
+    int delta_frames = (current.Frames) - (previous.Frames);
 
     if (delta_frames < 0) {
-        delta_frames += current.FramesPerSecond;
+        delta_frames += 1.0/120。0;
         delta_seconds -= 1;  
     }
 
     double delta_time = delta_seconds 
-                        + static_cast<double>(delta_frames) / current.FramesPerSecond;
+                        + (delta_frames) / (1。0/120。0);
 
     return delta_time;
 }
+
+// double calculateDistance(const std::vector<double>& a, const std::vector<double>& b) {
+//     return sqrt(pow(a[0] - b[0], 2) + pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2));
+// }
 
 void Communicator::get_frame() {
   if (!vicon_client.IsConnected().Connected) {
@@ -134,11 +138,8 @@ void Communicator::get_frame() {
   vicon_client.GetFrame();
   Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
   Output_GetTimecode timecode = vicon_client.GetTimecode();
-  std::size_t marker_count = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
-  marker_count_total.push_back(marker_count); // store marker count for majority element calculation
-
-  // get the majority element of the marker count
-  int marker_count = findMajorityElement(marker_count_total);
+  marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
+  std::size_t marker_count = findMajorityElement(marker_count_total);
 
   MarkersStruct current_markers(marker_count, frame_number.FrameNumber);
   for (std::size_t i = 0; i < marker_count; i++) {
@@ -150,8 +151,8 @@ void Communicator::get_frame() {
     current_markers.indices[i] = i;
   }
 
-  MarkersStruct prev_markers;
-  Output_GetTimecode prev_timecode;
+  MarkersStruct prev_markers = getPreviousMarkers();
+  Output_GetTimecode prev_timecode = getPreviousTimecode();
 
   if (!is_first_frame){
     double delta_time = CalculateDeltaTime(timecode, prev_timecode);
@@ -167,8 +168,6 @@ void Communicator::get_frame() {
     }
   }
 
-  prev_markers = current_markers;
-  prev_timecode = timecode;
 
   // send position to publisher
   map<string, Publisher>::iterator pub_it;

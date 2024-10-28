@@ -10,6 +10,10 @@
 #include <map>
 #include <string>
 #include <unistd.h>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <limits>
 
 using namespace std;
 
@@ -26,6 +30,7 @@ private:
   boost::mutex mutex;
 
 public:
+
   Communicator();
 
   // Initialises the connection to the DataStream server
@@ -42,8 +47,12 @@ public:
   void create_publisher(const string subject_name, const string segment_name);
   void create_publisher_thread(const string subject_name,
                                const string segment_name);
-  int findMajorityElement(const std::vector<int> &nums);
-  double CalculateDeltaTime(const Output_GetTimecode& current, const Output_GetTimecode& previous);
+  int findMajorityElement(const std::vector<std::size_t>&);
+  double CalculateDeltaTime(ViconDataStreamSDK::CPP::Output_GetTimecode& current, ViconDataStreamSDK::CPP::Output_GetTimecode& previous);
+
+  // TODO
+  MarkersStruct getPreviousMarkers();
+  Output_GetTimecode getPreviousTimecode();
 };
 
 } // namespace UnlabeledMarker

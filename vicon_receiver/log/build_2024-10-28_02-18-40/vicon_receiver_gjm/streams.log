@@ -1,0 +1,25 @@
+[0.028s] Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm -- -j8 -l8
+[0.062s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.086s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.087s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.286s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.288s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.293s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.474s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.504s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.577s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.579s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.800s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.801s]   rosidl_generate_interfaces() the passed file
+[0.801s]   'vicon_receiver/msg/Posture.msg' doesn't exist relative to the
+[0.801s]   CMAKE_CURRENT_SOURCE_DIR
+[0.801s]   '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver'
+[0.801s] Call Stack (most recent call first):
+[0.801s]   CMakeLists.txt:29 (rosidl_generate_interfaces)
+[0.801s] 
+[0.801s] 
+[0.802s] -- Configuring incomplete, errors occurred!
+[0.802s] See also "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm/CMakeFiles/CMakeOutput.log".
+[0.802s] See also "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm/CMakeFiles/CMakeError.log".
+[0.808s] make: *** [Makefile:1240: cmake_check_build_system] Error 1
+[0.810s] Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm -- -j8 -l8

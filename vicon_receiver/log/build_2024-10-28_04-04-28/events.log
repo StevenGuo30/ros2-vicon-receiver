@@ -1,0 +1,130 @@
+[0.000000] (-) TimerEvent: {}
+[0.000430] (vicon_receiver) JobQueued: {'identifier': 'vicon_receiver', 'dependencies': OrderedDict()}
+[0.000468] (vicon_receiver) JobStarted: {'identifier': 'vicon_receiver'}
+[0.020427] (vicon_receiver) JobProgress: {'identifier': 'vicon_receiver', 'progress': 'cmake'}
+[0.021474] (vicon_receiver) JobProgress: {'identifier': 'vicon_receiver', 'progress': 'build'}
+[0.022598] (vicon_receiver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver', '--', '-j8', '-l8'], 'cwd': '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver', 'env': OrderedDict([('WS', '/vicon_ws'), ('HOSTNAME', '1cb5f868ed4c'), ('GIT_ASKPASS', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/vicon_ws/install/vicon_receiver/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/vicon_GJM_test/ros2-vicon-receiver'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-25c155c9-f969-435c-913d-5216409ed7ea.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/vicon_GJM_test/ros2-vicon-receiver/install:/vicon_ws/install'), ('ROS_DISTRO', 'foxy'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock","/tmp/.X11-unix/X5"]'), ('DISPLAY', ':5'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e669ff0355.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('AMENT_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy'), ('DEBIAN_FRONTEND', 'noninteractive'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/vicon_ws/install/vicon_receiver/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy')]), 'shell': False}
+[0.097086] (-) TimerEvent: {}
+[0.103747] (vicon_receiver) StdoutLine: {'line': b'[  2%] Built target vicon_receiver__cpp\n'}
+[0.108676] (vicon_receiver) StdoutLine: {'line': b'[ 10%] Built target vicon_receiver__rosidl_generator_c\n'}
+[0.139827] (vicon_receiver) StdoutLine: {'line': b'[ 26%] Built target vicon_receiver__rosidl_typesupport_cpp\n'}
+[0.140442] (vicon_receiver) StdoutLine: {'line': b'[ 26%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp\n'}
+[0.143995] (vicon_receiver) StdoutLine: {'line': b'[ 34%] Built target vicon_receiver__rosidl_typesupport_c\n'}
+[0.147371] (vicon_receiver) StdoutLine: {'line': b'[ 42%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp\n'}
+[0.148683] (vicon_receiver) StdoutLine: {'line': b'[ 51%] Built target vicon_receiver__rosidl_typesupport_introspection_c\n'}
+[0.183434] (vicon_receiver) StdoutLine: {'line': b'[ 59%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c\n'}
+[0.198165] (-) TimerEvent: {}
+[0.209760] (vicon_receiver) StdoutLine: {'line': b'[ 59%] Built target vicon_receiver\n'}
+[0.228276] (vicon_receiver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_client_unlabeled\x1b[0m\n'}
+[0.238025] (vicon_receiver) StdoutLine: {'line': b'[ 61%] Built target vicon_receiver__py\n'}
+[0.256305] (vicon_receiver) StdoutLine: {'line': b'[ 71%] Built target vicon_client_mock\n'}
+[0.257362] (vicon_receiver) StdoutLine: {'line': b'[ 75%] Built target vicon_client\n'}
+[0.272336] (vicon_receiver) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o\x1b[0m\n'}
+[0.288692] (vicon_receiver) StdoutLine: {'line': b'[ 83%] Built target vicon_receiver__python\n'}
+[0.299286] (-) TimerEvent: {}
+[0.343144] (vicon_receiver) StdoutLine: {'line': b'[ 87%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext\n'}
+[0.343461] (vicon_receiver) StdoutLine: {'line': b'[ 91%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.349164] (vicon_receiver) StdoutLine: {'line': b'[ 95%] Built target vicon_receiver__rosidl_typesupport_c__pyext\n'}
+[0.400197] (-) TimerEvent: {}
+[0.501150] (-) TimerEvent: {}
+[0.602334] (-) TimerEvent: {}
+[0.703216] (-) TimerEvent: {}
+[0.804229] (-) TimerEvent: {}
+[0.905214] (-) TimerEvent: {}
+[1.006219] (-) TimerEvent: {}
+[1.107177] (-) TimerEvent: {}
+[1.208426] (-) TimerEvent: {}
+[1.309373] (-) TimerEvent: {}
+[1.410250] (-) TimerEvent: {}
+[1.511290] (-) TimerEvent: {}
+[1.612129] (-) TimerEvent: {}
+[1.713366] (-) TimerEvent: {}
+[1.814258] (-) TimerEvent: {}
+[1.915236] (-) TimerEvent: {}
+[2.016232] (-) TimerEvent: {}
+[2.117279] (-) TimerEvent: {}
+[2.218380] (-) TimerEvent: {}
+[2.320162] (-) TimerEvent: {}
+[2.420497] (-) TimerEvent: {}
+[2.521383] (-) TimerEvent: {}
+[2.622216] (-) TimerEvent: {}
+[2.723353] (-) TimerEvent: {}
+[2.824224] (-) TimerEvent: {}
+[2.925069] (-) TimerEvent: {}
+[3.026238] (-) TimerEvent: {}
+[3.127267] (-) TimerEvent: {}
+[3.228203] (-) TimerEvent: {}
+[3.329261] (-) TimerEvent: {}
+[3.430107] (-) TimerEvent: {}
+[3.531251] (-) TimerEvent: {}
+[3.632166] (-) TimerEvent: {}
+[3.733260] (-) TimerEvent: {}
+[3.834068] (-) TimerEvent: {}
+[3.935269] (-) TimerEvent: {}
+[4.036294] (-) TimerEvent: {}
+[4.137301] (-) TimerEvent: {}
+[4.238066] (-) TimerEvent: {}
+[4.339219] (-) TimerEvent: {}
+[4.440279] (-) TimerEvent: {}
+[4.488935] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint ViconReceiver::UnlabeledMarker::findMajorityElement(std::vector<long unsigned int>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.489168] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:83:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.489290] (vicon_receiver) StderrLine: {'line': b'   83 |   for (int i = 1; \x1b[01;35m\x1b[Ki < nums.size()\x1b[m\x1b[K; i++) {\n'}
+[4.489402] (vicon_receiver) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.489534] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:87:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[K__gnu_cxx::__alloc_traits<std::allocator<long unsigned int>, long unsigned int>::value_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.489899] (vicon_receiver) StderrLine: {'line': b'   87 |     } else if (majority == nums[i]) {\n'}
+[4.490094] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:103:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.490174] (vicon_receiver) StderrLine: {'line': b'  103 |   if (\x1b[01;35m\x1b[Kcount <= nums.size() / 2\x1b[m\x1b[K) {\n'}
+[4.490251] (vicon_receiver) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.490326] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kdouble ViconReceiver::UnlabeledMarker::CalculateDeltaTime(ViconDataStreamSDK::CPP::Output_GetTimecode&, ViconDataStreamSDK::CPP::Output_GetTimecode&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.490396] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:122:42:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kdivision by zero [\x1b[01;35m\x1b[K-Wdiv-by-zero\x1b[m\x1b[K]\n'}
+[4.490465] (vicon_receiver) StderrLine: {'line': b'  122 |                         + \x1b[01;35m\x1b[K(delta_frames) / (1/120)\x1b[m\x1b[K;\n'}
+[4.490558] (vicon_receiver) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.491233] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ViconReceiver::UnlabeledMarker::Communicator::get_frame()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.491405] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:139:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<int>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.491490] (vicon_receiver) StderrLine: {'line': b'  139 |   std::size_t marker_count = findMajorityElement(\x1b[01;31m\x1b[Kmarker_count_total\x1b[m\x1b[K);\n'}
+[4.491560] (vicon_receiver) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.491633] (vicon_receiver) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[4.491721] (vicon_receiver) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[Kstd::vector<long unsigned int>\x1b[m\x1b[K\n'}
+[4.491829] (vicon_receiver) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1\x1b[m\x1b[K:\n'}
+[4.492188] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:46:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kint ViconReceiver::UnlabeledMarker::Communicator::findMajorityElement(const std::vector<int>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.492670] (vicon_receiver) StderrLine: {'line': b'   46 |   int findMajorityElement(\x1b[01;36m\x1b[Kconst std::vector<int> &nums\x1b[m\x1b[K);\n'}
+[4.492776] (vicon_receiver) StderrLine: {'line': b'      |                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[4.492958] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:151:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.493462] (vicon_receiver) StderrLine: {'line': b'  151 |   MarkersStruct \x1b[01;31m\x1b[Kprev_markers\x1b[m\x1b[K;\n'}
+[4.493835] (vicon_receiver) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.494237] (vicon_receiver) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:6\x1b[m\x1b[K,\n'}
+[4.494324] (vicon_receiver) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1\x1b[m\x1b[K:\n'}
+[4.494400] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:13:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(std::size_t, unsigned int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.494475] (vicon_receiver) StderrLine: {'line': b'   13 |   \x1b[01;36m\x1b[KMarkersStruct\x1b[m\x1b[K(std::size_t size, unsigned int frame_number)\n'}
+[4.494550] (vicon_receiver) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.494620] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:13:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 0 provided\n'}
+[4.494707] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(const ViconReceiver::UnlabeledMarker::MarkersStruct&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.494780] (vicon_receiver) StderrLine: {'line': b'   11 | struct \x1b[01;36m\x1b[KMarkersStruct\x1b[m\x1b[K {\n'}
+[4.494854] (vicon_receiver) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.494924] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 0 provided\n'}
+[4.495250] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KViconReceiver::UnlabeledMarker::MarkersStruct::MarkersStruct(ViconReceiver::UnlabeledMarker::MarkersStruct&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.495388] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:11:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 0 provided\n'}
+[4.495517] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:164:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kspeed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.495596] (vicon_receiver) StderrLine: {'line': b'  164 |         double \x1b[01;35m\x1b[Kspeed\x1b[m\x1b[K = sqrt(dx * dx + dy * dy + dz * dz) / delta_time;\n'}
+[4.495666] (vicon_receiver) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.541075] (-) TimerEvent: {}
+[4.642303] (-) TimerEvent: {}
+[4.743180] (-) TimerEvent: {}
+[4.844187] (-) TimerEvent: {}
+[4.945169] (-) TimerEvent: {}
+[5.046247] (-) TimerEvent: {}
+[5.147205] (-) TimerEvent: {}
+[5.248074] (-) TimerEvent: {}
+[5.349072] (-) TimerEvent: {}
+[5.450172] (-) TimerEvent: {}
+[5.551342] (-) TimerEvent: {}
+[5.652155] (-) TimerEvent: {}
+[5.753201] (-) TimerEvent: {}
+[5.832950] (vicon_receiver) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:63: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o] Error 1\n'}
+[5.833261] (vicon_receiver) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/vicon_client_unlabeled.dir/all] Error 2\n'}
+[5.833550] (vicon_receiver) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[5.836127] (vicon_receiver) CommandEnded: {'returncode': 2}
+[5.854260] (-) TimerEvent: {}
+[5.958639] (-) TimerEvent: {}
+[5.975731] (vicon_receiver) JobEnded: {'identifier': 'vicon_receiver', 'rc': 2}
+[5.978652] (-) EventReactorShutdown: {}

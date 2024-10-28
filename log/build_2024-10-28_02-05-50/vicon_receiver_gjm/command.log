@@ -1,0 +1,2 @@
+Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm -- -j8 -l8
+Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm -- -j8 -l8

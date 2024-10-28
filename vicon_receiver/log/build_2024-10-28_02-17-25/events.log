@@ -1,0 +1,252 @@
+[0.000000] (-) TimerEvent: {}
+[0.000247] (vicon_receiver_gjm) JobQueued: {'identifier': 'vicon_receiver_gjm', 'dependencies': OrderedDict()}
+[0.000283] (vicon_receiver_gjm) JobStarted: {'identifier': 'vicon_receiver_gjm'}
+[0.025293] (vicon_receiver_gjm) JobProgress: {'identifier': 'vicon_receiver_gjm', 'progress': 'cmake'}
+[0.026668] (vicon_receiver_gjm) Command: {'cmd': ['/usr/bin/cmake', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver', '-DCMAKE_INSTALL_PREFIX=/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver_gjm'], 'cwd': '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm', 'env': OrderedDict([('WS', '/vicon_ws'), ('HOSTNAME', '1cb5f868ed4c'), ('GIT_ASKPASS', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/vicon_ws/install/vicon_receiver/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/vicon_GJM_test/ros2-vicon-receiver'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-25c155c9-f969-435c-913d-5216409ed7ea.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/vicon_GJM_test/ros2-vicon-receiver/install:/vicon_ws/install'), ('ROS_DISTRO', 'foxy'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock","/tmp/.X11-unix/X5"]'), ('DISPLAY', ':5'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e669ff0355.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('AMENT_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy'), ('DEBIAN_FRONTEND', 'noninteractive'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/vicon_ws/install/vicon_receiver/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy')]), 'shell': False}
+[0.099273] (-) TimerEvent: {}
+[0.105729] (vicon_receiver_gjm) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.180291] (vicon_receiver_gjm) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.186835] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.200198] (-) TimerEvent: {}
+[0.278720] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.279891] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.301173] (-) TimerEvent: {}
+[0.366748] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.383640] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.384776] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.388012] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.402280] (-) TimerEvent: {}
+[0.484351] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.485804] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.503194] (-) TimerEvent: {}
+[0.589818] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.604200] (-) TimerEvent: {}
+[0.607170] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.608095] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.613168] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.643809] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.643986] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.705321] (-) TimerEvent: {}
+[0.806114] (-) TimerEvent: {}
+[0.873499] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.877525] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.887565] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.907228] (-) TimerEvent: {}
+[1.008270] (-) TimerEvent: {}
+[1.019177] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.059182] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.108985] (-) TimerEvent: {}
+[1.168821] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.208938] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.209120] (-) TimerEvent: {}
+[1.294796] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.296695] (vicon_receiver_gjm) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.298184] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.310180] (-) TimerEvent: {}
+[1.388133] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.388442] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.411055] (-) TimerEvent: {}
+[1.478454] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.478892] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.512224] (-) TimerEvent: {}
+[1.550911] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.551299] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.613238] (-) TimerEvent: {}
+[1.636541] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.638148] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.714167] (-) TimerEvent: {}
+[1.815286] (-) TimerEvent: {}
+[1.870953] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: thread \n'}
+[1.898116] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[1.916108] (-) TimerEvent: {}
+[2.017099] (-) TimerEvent: {}
+[2.048166] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[2.118248] (-) TimerEvent: {}
+[2.181963] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.193495] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.218513] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[2.218681] (-) TimerEvent: {}
+[2.220452] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[2.254791] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[2.255314] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.255404] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[2.255476] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[2.278574] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.319277] (-) TimerEvent: {}
+[2.420544] (-) TimerEvent: {}
+[2.494395] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Using numpy include directory: /usr/local/lib/python3.8/dist-packages/numpy/core/include\n'}
+[2.509024] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 1.3.2 (/opt/ros/foxy/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.521093] (-) TimerEvent: {}
+[2.621980] (-) TimerEvent: {}
+[2.678122] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.723077] (-) TimerEvent: {}
+[2.770157] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Generating done\n'}
+[2.778736] (vicon_receiver_gjm) StdoutLine: {'line': b'-- Build files have been written to: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm\n'}
+[2.789990] (vicon_receiver_gjm) CommandEnded: {'returncode': 0}
+[2.791833] (vicon_receiver_gjm) JobProgress: {'identifier': 'vicon_receiver_gjm', 'progress': 'build'}
+[2.795415] (vicon_receiver_gjm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm', '--', '-j8', '-l8'], 'cwd': '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm', 'env': OrderedDict([('WS', '/vicon_ws'), ('HOSTNAME', '1cb5f868ed4c'), ('GIT_ASKPASS', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/vicon_ws/install/vicon_receiver/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/vicon_GJM_test/ros2-vicon-receiver'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-25c155c9-f969-435c-913d-5216409ed7ea.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/vicon_GJM_test/ros2-vicon-receiver/install:/vicon_ws/install'), ('ROS_DISTRO', 'foxy'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock","/tmp/.X11-unix/X5"]'), ('DISPLAY', ':5'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e669ff0355.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('AMENT_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy'), ('DEBIAN_FRONTEND', 'noninteractive'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/vicon_ws/install/vicon_receiver/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy')]), 'shell': False}
+[2.824183] (-) TimerEvent: {}
+[2.848113] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__cpp\x1b[0m\n'}
+[2.849192] (vicon_receiver_gjm) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.862028] (vicon_receiver_gjm) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.925045] (-) TimerEvent: {}
+[3.026256] (-) TimerEvent: {}
+[3.127135] (-) TimerEvent: {}
+[3.228246] (-) TimerEvent: {}
+[3.329192] (-) TimerEvent: {}
+[3.371226] (vicon_receiver_gjm) StdoutLine: {'line': b'[  4%] Built target vicon_receiver_gjm__cpp\n'}
+[3.387067] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.387605] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.387766] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.389110] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_generator_c\x1b[0m\n'}
+[3.408216] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/vicon_receiver_gjm__rosidl_generator_c.dir/rosidl_generator_c/vicon_receiver_gjm/msg/detail/markers_list__functions.c.o\x1b[0m\n'}
+[3.408781] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/vicon_receiver_gjm__rosidl_generator_c.dir/rosidl_generator_c/vicon_receiver_gjm/msg/detail/posture__functions.c.o\x1b[0m\n'}
+[3.430057] (-) TimerEvent: {}
+[3.495582] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 16%] \x1b[32m\x1b[1mLinking C shared library libvicon_receiver_gjm__rosidl_generator_c.so\x1b[0m\n'}
+[3.531218] (-) TimerEvent: {}
+[3.538120] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 16%] Built target vicon_receiver_gjm__rosidl_generator_c\n'}
+[3.555668] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.555900] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.632117] (-) TimerEvent: {}
+[3.733041] (-) TimerEvent: {}
+[3.834093] (-) TimerEvent: {}
+[3.935008] (-) TimerEvent: {}
+[3.965380] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_typesupport_cpp\x1b[0m\n'}
+[3.981392] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vicon_receiver_gjm/msg/posture__type_support.cpp.o\x1b[0m\n'}
+[3.981704] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vicon_receiver_gjm/msg/markers_list__type_support.cpp.o\x1b[0m\n'}
+[3.981844] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[4.004531] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vicon_receiver_gjm/msg/detail/posture__type_support.cpp.o\x1b[0m\n'}
+[4.006373] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vicon_receiver_gjm/msg/detail/markers_list__type_support.cpp.o\x1b[0m\n'}
+[4.035114] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[4.035324] (-) TimerEvent: {}
+[4.068370] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vicon_receiver_gjm/msg/detail/dds_fastrtps/posture__type_support.cpp.o\x1b[0m\n'}
+[4.075312] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vicon_receiver_gjm/msg/detail/dds_fastrtps/markers_list__type_support.cpp.o\x1b[0m\n'}
+[4.136207] (-) TimerEvent: {}
+[4.144073] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_typesupport_c\x1b[0m\n'}
+[4.171424] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_c.dir/rosidl_typesupport_c/vicon_receiver_gjm/msg/posture__type_support.cpp.o\x1b[0m\n'}
+[4.227852] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_c.dir/rosidl_typesupport_c/vicon_receiver_gjm/msg/markers_list__type_support.cpp.o\x1b[0m\n'}
+[4.237125] (-) TimerEvent: {}
+[4.257222] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[4.287336] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vicon_receiver_gjm/msg/detail/posture__type_support.c.o\x1b[0m\n'}
+[4.290893] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX shared library libvicon_receiver_gjm__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.337882] (-) TimerEvent: {}
+[4.367865] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vicon_receiver_gjm/msg/detail/markers_list__type_support.c.o\x1b[0m\n'}
+[4.380586] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 42%] Built target vicon_receiver_gjm__rosidl_typesupport_c\n'}
+[4.438063] (-) TimerEvent: {}
+[4.478417] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking C shared library libvicon_receiver_gjm__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.535420] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 44%] Built target vicon_receiver_gjm__rosidl_typesupport_introspection_c\n'}
+[4.539087] (-) TimerEvent: {}
+[4.640069] (-) TimerEvent: {}
+[4.668801] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libvicon_receiver_gjm__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.723760] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 46%] Built target vicon_receiver_gjm__rosidl_typesupport_cpp\n'}
+[4.741187] (-) TimerEvent: {}
+[4.783527] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libvicon_receiver_gjm__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.842080] (-) TimerEvent: {}
+[4.869115] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 48%] Built target vicon_receiver_gjm__rosidl_typesupport_introspection_cpp\n'}
+[4.943079] (-) TimerEvent: {}
+[5.044200] (-) TimerEvent: {}
+[5.065973] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libvicon_receiver_gjm__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.145192] (-) TimerEvent: {}
+[5.165586] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 51%] Built target vicon_receiver_gjm__rosidl_typesupport_fastrtps_cpp\n'}
+[5.179044] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.246221] (-) TimerEvent: {}
+[5.347160] (-) TimerEvent: {}
+[5.448230] (-) TimerEvent: {}
+[5.549094] (-) TimerEvent: {}
+[5.650109] (-) TimerEvent: {}
+[5.658383] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[5.678166] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vicon_receiver_gjm/msg/detail/posture__type_support_c.cpp.o\x1b[0m\n'}
+[5.678628] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/vicon_receiver_gjm__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vicon_receiver_gjm/msg/detail/markers_list__type_support_c.cpp.o\x1b[0m\n'}
+[5.751269] (-) TimerEvent: {}
+[5.852193] (-) TimerEvent: {}
+[5.953082] (-) TimerEvent: {}
+[6.054101] (-) TimerEvent: {}
+[6.155020] (-) TimerEvent: {}
+[6.172491] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libvicon_receiver_gjm__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.256069] (-) TimerEvent: {}
+[6.265651] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 59%] Built target vicon_receiver_gjm__rosidl_typesupport_fastrtps_c\n'}
+[6.279463] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm\x1b[0m\n'}
+[6.292600] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 59%] Built target vicon_receiver_gjm\n'}
+[6.306553] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_receiver_gjm__py\x1b[0m\n'}
+[6.306727] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_client_mock\x1b[0m\n'}
+[6.306803] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_client\x1b[0m\n'}
+[6.306872] (vicon_receiver_gjm) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_client_unlabeled\x1b[0m\n'}
+[6.322282] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 61%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.360188] (-) TimerEvent: {}
+[6.366560] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o\x1b[0m\n'}
+[6.366794] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/publisher.cpp.o\x1b[0m\n'}
+[6.367004] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client.dir/src/vicon_receiver/communicator.cpp.o\x1b[0m\n'}
+[6.370503] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client.dir/src/vicon_receiver/publisher.cpp.o\x1b[0m\n'}
+[6.374456] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/communicator.cpp.o\x1b[0m\n'}
+[6.375947] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/publisher.cpp.o\x1b[0m\n'}
+[6.384443] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/data.cpp.o\x1b[0m\n'}
+[6.461119] (-) TimerEvent: {}
+[6.565147] (-) TimerEvent: {}
+[6.598903] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/publisher.cpp:1\x1b[m\x1b[K:\n'}
+[6.599324] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/markers_list.hpp: No such file or directory\n'}
+[6.599468] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/markers_list.hpp"\x1b[m\x1b[K\n'}
+[6.599593] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.599709] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.601239] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:76: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/publisher.cpp.o] Error 1\n'}
+[6.601608] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[6.603456] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver_mock/publisher.cpp:1\x1b[m\x1b[K:\n'}
+[6.603744] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/posture.hpp: No such file or directory\n'}
+[6.603865] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/posture.hpp"\x1b[m\x1b[K\n'}
+[6.604124] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.604273] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.604474] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client_mock.dir/build.make:76: CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/publisher.cpp.o] Error 1\n'}
+[6.604597] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[6.605039] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:6\x1b[m\x1b[K,\n'}
+[6.605194] (vicon_receiver_gjm) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1\x1b[m\x1b[K:\n'}
+[6.605319] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/markers_list.hpp: No such file or directory\n'}
+[6.605439] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/markers_list.hpp"\x1b[m\x1b[K\n'}
+[6.605553] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.605659] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.605826] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver/publisher.cpp:1\x1b[m\x1b[K:\n'}
+[6.605936] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/posture.hpp: No such file or directory\n'}
+[6.606133] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/posture.hpp"\x1b[m\x1b[K\n'}
+[6.606255] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.606371] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.606546] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:63: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o] Error 1\n'}
+[6.606795] (vicon_receiver_gjm) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:128: CMakeFiles/vicon_client_unlabeled.dir/all] Error 2\n'}
+[6.607292] (vicon_receiver_gjm) StderrLine: {'line': b'make[1]: *** Waiting for unfinished jobs....\n'}
+[6.607810] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client.dir/build.make:76: CMakeFiles/vicon_client.dir/src/vicon_receiver/publisher.cpp.o] Error 1\n'}
+[6.607954] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** Waiting for unfinished jobs....\n'}
+[6.610598] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver/communicator.hpp:6\x1b[m\x1b[K,\n'}
+[6.610844] (vicon_receiver_gjm) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver/communicator.cpp:1\x1b[m\x1b[K:\n'}
+[6.611103] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/posture.hpp: No such file or directory\n'}
+[6.611263] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/posture.hpp"\x1b[m\x1b[K\n'}
+[6.611428] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.611790] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.612002] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/data.hpp:2\x1b[m\x1b[K,\n'}
+[6.612110] (vicon_receiver_gjm) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver_mock/data.cpp:1\x1b[m\x1b[K:\n'}
+[6.612181] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/posture.hpp: No such file or directory\n'}
+[6.612297] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/posture.hpp"\x1b[m\x1b[K\n'}
+[6.612383] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.612450] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.612516] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client.dir/build.make:63: CMakeFiles/vicon_client.dir/src/vicon_receiver/communicator.cpp.o] Error 1\n'}
+[6.612582] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client_mock.dir/build.make:89: CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/data.cpp.o] Error 1\n'}
+[6.612652] (vicon_receiver_gjm) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/vicon_client.dir/all] Error 2\n'}
+[6.617751] (vicon_receiver_gjm) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/data.hpp:2\x1b[m\x1b[K,\n'}
+[6.617896] (vicon_receiver_gjm) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/communicator.hpp:4\x1b[m\x1b[K,\n'}
+[6.617974] (vicon_receiver_gjm) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver_mock/communicator.cpp:1\x1b[m\x1b[K:\n'}
+[6.618294] (vicon_receiver_gjm) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/publisher.hpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvicon_receiver/msg/posture.hpp: No such file or directory\n'}
+[6.618441] (vicon_receiver_gjm) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K"vicon_receiver/msg/posture.hpp"\x1b[m\x1b[K\n'}
+[6.618556] (vicon_receiver_gjm) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.619181] (vicon_receiver_gjm) StderrLine: {'line': b'compilation terminated.\n'}
+[6.620044] (vicon_receiver_gjm) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vicon_client_mock.dir/build.make:63: CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/communicator.cpp.o] Error 1\n'}
+[6.620707] (vicon_receiver_gjm) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:388: CMakeFiles/vicon_client_mock.dir/all] Error 2\n'}
+[6.666189] (-) TimerEvent: {}
+[6.767146] (-) TimerEvent: {}
+[6.868182] (-) TimerEvent: {}
+[6.970265] (-) TimerEvent: {}
+[7.071329] (-) TimerEvent: {}
+[7.172018] (-) TimerEvent: {}
+[7.273104] (-) TimerEvent: {}
+[7.370611] (vicon_receiver_gjm) StdoutLine: {'line': b'[ 75%] Built target vicon_receiver_gjm__py\n'}
+[7.371666] (vicon_receiver_gjm) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[7.373913] (vicon_receiver_gjm) CommandEnded: {'returncode': 2}
+[7.374341] (-) TimerEvent: {}
+[7.477047] (-) TimerEvent: {}
+[7.509586] (vicon_receiver_gjm) JobEnded: {'identifier': 'vicon_receiver_gjm', 'rc': 2}
+[7.521953] (-) EventReactorShutdown: {}

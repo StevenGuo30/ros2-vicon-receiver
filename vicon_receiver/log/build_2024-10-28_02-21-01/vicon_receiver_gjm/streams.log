@@ -1,0 +1,102 @@
+[0.030s] Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm -- -j8 -l8
+[0.063s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.088s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.290s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.292s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.296s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.481s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.512s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.582s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.584s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.822s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.966s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.095s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.105s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.133s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.133s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.158s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.158s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.158s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.345s] -- Using numpy include directory: /usr/local/lib/python3.8/dist-packages/numpy/core/include
+[1.358s] -- Found rmw_fastrtps_cpp: 1.3.2 (/opt/ros/foxy/share/rmw_fastrtps_cpp/cmake)
+[1.513s] -- Configuring done
+[1.580s] -- Generating done
+[1.586s] -- Build files have been written to: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm
+[1.633s] [  6%] Built target vicon_receiver_gjm__cpp
+[1.633s] [ 10%] Built target vicon_receiver_gjm__rosidl_generator_c
+[1.665s] [ 18%] Built target vicon_receiver_gjm__rosidl_typesupport_introspection_cpp
+[1.666s] [ 34%] Built target vicon_receiver_gjm__rosidl_typesupport_cpp
+[1.667s] [ 32%] Built target vicon_receiver_gjm__rosidl_typesupport_c
+[1.668s] [ 42%] Built target vicon_receiver_gjm__rosidl_typesupport_introspection_c
+[1.671s] [ 51%] Built target vicon_receiver_gjm__rosidl_typesupport_fastrtps_cpp
+[1.706s] [ 59%] Built target vicon_receiver_gjm__rosidl_typesupport_fastrtps_c
+[1.731s] [ 59%] Built target vicon_receiver_gjm
+[1.761s] [ 61%] Built target vicon_receiver_gjm__py
+[1.773s] [ 63%] [32mBuilding CXX object CMakeFiles/vicon_client.dir/src/vicon_receiver/communicator.cpp.o[0m
+[1.773s] [ 65%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/publisher.cpp.o[0m
+[1.777s] [ 67%] [32mBuilding CXX object CMakeFiles/vicon_client.dir/src/vicon_receiver/publisher.cpp.o[0m
+[1.777s] [ 71%] [32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/data.cpp.o[0m
+[1.777s] [ 71%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o[0m
+[1.777s] [ 73%] [32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/publisher.cpp.o[0m
+[1.779s] [ 75%] [32mBuilding CXX object CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/communicator.cpp.o[0m
+[1.780s] [35m[1mScanning dependencies of target vicon_receiver_gjm__python[0m
+[1.883s] [ 77%] [32mBuilding C object CMakeFiles/vicon_receiver_gjm__python.dir/rosidl_generator_py/vicon_receiver_gjm/msg/_posture_s.c.o[0m
+[2.009s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver_mock/publisher.cpp:1[m[K:
+[2.009s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/posture.hpp: No such file or directory
+[2.010s]     4 | #include [01;31m[K"vicon_receiver/msg/posture.hpp"[m[K
+[2.010s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.010s] compilation terminated.
+[2.010s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/data.hpp:2[m[K,
+[2.011s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver_mock/data.cpp:1[m[K:
+[2.011s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/posture.hpp: No such file or directory
+[2.011s]     4 | #include [01;31m[K"vicon_receiver/msg/posture.hpp"[m[K
+[2.011s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.012s] compilation terminated.
+[2.012s] make[2]: *** [CMakeFiles/vicon_client_mock.dir/build.make:76: CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/publisher.cpp.o] Error 1
+[2.014s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/data.hpp:2[m[K,
+[2.014s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/communicator.hpp:4[m[K,
+[2.014s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver_mock/communicator.cpp:1[m[K:
+[2.014s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver_mock/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/posture.hpp: No such file or directory
+[2.014s]     4 | #include [01;31m[K"vicon_receiver/msg/posture.hpp"[m[K
+[2.014s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.015s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver/publisher.cpp:1[m[K:
+[2.015s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/posture.hpp: No such file or directory
+[2.015s]     4 | #include [01;31m[K"vicon_receiver/msg/posture.hpp"[m[K
+[2.015s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.015s] compilation terminated.
+[2.015s] compilation terminated.
+[2.016s] make[2]: *** [CMakeFiles/vicon_client.dir/build.make:76: CMakeFiles/vicon_client.dir/src/vicon_receiver/publisher.cpp.o] Error 1
+[2.016s] make[2]: *** Waiting for unfinished jobs....
+[2.017s] make[2]: *** Waiting for unfinished jobs....
+[2.017s] make[2]: *** [CMakeFiles/vicon_client_mock.dir/build.make:63: CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/communicator.cpp.o] Error 1
+[2.017s] make[2]: *** [CMakeFiles/vicon_client_mock.dir/build.make:89: CMakeFiles/vicon_client_mock.dir/src/vicon_receiver_mock/data.cpp.o] Error 1
+[2.017s] make[1]: *** [CMakeFiles/Makefile2:388: CMakeFiles/vicon_client_mock.dir/all] Error 2
+[2.017s] make[1]: *** Waiting for unfinished jobs....
+[2.019s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:6[m[K,
+[2.019s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[2.019s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/markers_list.hpp: No such file or directory
+[2.020s]     4 | #include [01;31m[K"vicon_receiver/msg/markers_list.hpp"[m[K
+[2.020s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.020s] compilation terminated.
+[2.020s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver/communicator.hpp:6[m[K,
+[2.020s]                  from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_receiver/communicator.cpp:1[m[K:
+[2.021s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_receiver/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/posture.hpp: No such file or directory
+[2.021s]     4 | #include [01;31m[K"vicon_receiver/msg/posture.hpp"[m[K
+[2.021s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.021s] compilation terminated.
+[2.022s] In file included from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/publisher.cpp:1[m[K:
+[2.022s] [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/publisher.hpp:4:10:[m[K [01;31m[Kfatal error: [m[Kvicon_receiver/msg/markers_list.hpp: No such file or directory
+[2.023s]     4 | #include [01;31m[K"vicon_receiver/msg/markers_list.hpp"[m[K
+[2.023s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.023s] compilation terminated.
+[2.024s] make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:63: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o] Error 1
+[2.024s] make[2]: *** Waiting for unfinished jobs....
+[2.024s] make[2]: *** [CMakeFiles/vicon_client.dir/build.make:63: CMakeFiles/vicon_client.dir/src/vicon_receiver/communicator.cpp.o] Error 1
+[2.024s] make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:76: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/publisher.cpp.o] Error 1
+[2.024s] make[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/vicon_client.dir/all] Error 2
+[2.024s] make[1]: *** [CMakeFiles/Makefile2:128: CMakeFiles/vicon_client_unlabeled.dir/all] Error 2
+[2.028s] [ 79%] [32mBuilding C object CMakeFiles/vicon_receiver_gjm__python.dir/rosidl_generator_py/vicon_receiver_gjm/msg/_markers_list_s.c.o[0m
+[2.170s] [ 81%] [32m[1mLinking C shared library rosidl_generator_py/vicon_receiver_gjm/libvicon_receiver_gjm__python.so[0m
+[2.220s] [ 81%] Built target vicon_receiver_gjm__python
+[2.222s] make: *** [Makefile:141: all] Error 2
+[2.224s] Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver_gjm -- -j8 -l8

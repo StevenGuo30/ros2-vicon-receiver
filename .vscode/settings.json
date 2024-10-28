@@ -86,5 +86,6 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "cinttypes": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/user/Desktop/BR2/Vicon/vicon_receiver"
 }

@@ -1,0 +1,1370 @@
+[  2%] Built target vicon_receiver__cpp
+[ 10%] Built target vicon_receiver__rosidl_generator_c
+[ 20%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp
+[ 26%] Built target vicon_receiver__rosidl_typesupport_introspection_c
+[ 42%] Built target vicon_receiver__rosidl_typesupport_cpp
+[ 42%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp
+[ 51%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c
+[ 59%] Built target vicon_receiver__rosidl_typesupport_c
+[ 59%] Built target vicon_receiver
+[35m[1mScanning dependencies of target vicon_client_unlabeled[0m
+[ 61%] Built target vicon_receiver__py
+[ 67%] Built target vicon_client
+[ 75%] Built target vicon_client_mock
+[ 77%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o[0m
+[ 83%] Built target vicon_receiver__python
+[ 95%] Built target vicon_receiver__rosidl_typesupport_c__pyext
+[ 95%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext
+[ 95%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kint ViconReceiver::UnlabeledMarker::Communicator::findMajorityElement(std::vector<long unsigned int>&)[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:82:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   82 |   for (int i = 1; [01;35m[Ki < nums.size()[m[K; i++) {
+      |                   [01;35m[K~~^~~~~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:86:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<long unsigned int>, long unsigned int>::value_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   86 |     } else if (majority == nums[i]) {
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:102:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  102 |   if ([01;35m[Kcount <= nums.size() / 2[m[K) {
+      |       [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kstd::pair<std::vector<std::pair<int, int> >, double> ViconReceiver::UnlabeledMarker::Communicator::findOptimalAssignment(const MarkersStruct&, const MarkersStruct&)[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:23:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>[m[K’)
+  195 |     for (int i = 0; [32m[Ki[m[K [01;31m[K<[m[K [34m[Kn[m[K; ++i) {
+      |                     [32m[K~[m[K [01;31m[K^[m[K [34m[K~[m[K
+      |                     [32m[K|[m[K   [34m[K|[m[K
+      |                     [32m[Kint[m[K [34m[Kstd::vector<int>[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:64[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+  454 |     [01;36m[Koperator[m[K<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:331:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+  331 |     [01;36m[Koperator[m[K<(const reverse_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:331:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:369:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+  369 |     [01;36m[Koperator[m[K<(const reverse_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:369:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1160:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+ 1160 |     [01;36m[Koperator[m[K<(const move_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1160:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1166:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+ 1166 |     [01;36m[Koperator[m[K<(const move_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1166:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6229:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6229 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6229:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6242:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)[m[K’
+ 6242 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6242:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6254:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6254 |     [01;36m[Koperator[m[K<(const _CharT* __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6254:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:38[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1905:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+ 1905 |     [01;36m[Koperator[m[K<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1905:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/array:262:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+  262 |     [01;36m[Koperator[m[K<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/array:262:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:1432:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)[m[K’
+ 1432 |     [01;36m[Koperator[m[K<(const tuple<_TElements...>& __t,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:1432:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_Tps ...>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:749:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+  749 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:749:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+  760 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:766:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+  766 |     [01;36m[Koperator[m[K<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:766:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1444:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+ 1444 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1444:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1455:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+ 1455 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1455:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1463:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+ 1463 |     [01;36m[Koperator[m[K<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1463:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:413:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+  413 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:413:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:423:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+  423 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:423:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:431:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+  431 |     [01;36m[Koperator[m[K<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:431:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/system_error:208:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_code&, const std::error_code&)[m[K’
+  208 |   [01;36m[Koperator[m[K<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:208:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::error_code&[m[K’
+  208 |   operator<([01;36m[Kconst error_code& __lhs[m[K, const error_code& __rhs) noexcept
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:282:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_condition&, const std::error_condition&)[m[K’
+  282 |   [01;36m[Koperator[m[K<(const error_condition& __lhs,
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:282:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::error_condition&[m[K’
+  282 |   operator<([01;36m[Kconst error_condition& __lhs[m[K,
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/future:39[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/thread:290:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(std::thread::id, std::thread::id)[m[K’
+  290 |   [01;36m[Koperator[m[K<(thread::id __x, thread::id __y) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/thread:290:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::thread::id[m[K’
+  290 |   operator<([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+      |             [01;36m[K~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/set:61[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_set.h:996:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)[m[K’
+  996 |     [01;36m[Koperator[m[K<(const set<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_set.h:996:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::set<_Key, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/set:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:981:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)[m[K’
+  981 |     [01;36m[Koperator[m[K<(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:981:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multiset<_Key, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/list:63[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_list.h:2025:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+ 2025 |     [01;36m[Koperator[m[K<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:2025:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/map:61[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_map.h:1472:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)[m[K’
+ 1472 |     [01;36m[Koperator[m[K<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_map.h:1472:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/map:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1136:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)[m[K’
+ 1136 |     [01;36m[Koperator[m[K<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1136:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:312:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Ref, class _Ptr> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)[m[K’
+  312 |     [01;36m[Koperator[m[K<(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:312:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:320:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)[m[K’
+  320 |     [01;36m[Koperator[m[K<(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:320:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2330:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)[m[K’
+ 2330 |     [01;36m[Koperator[m[K<(const deque<_Tp, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2330:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:912:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)[m[K’
+  912 |     [01;36m[Koperator[m[K<(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:912:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_IteratorL, _Container>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:919:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)[m[K’
+  919 |     [01;36m[Koperator[m[K<(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:919:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iterator, _Container>[m[K’ and ‘[01m[Kint[m[K’
+  195 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:27:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>[m[K’)
+  196 |         for (int j = 0; [32m[Kj[m[K [01;31m[K<[m[K [34m[Km[m[K; ++j) {
+      |                         [32m[K~[m[K [01;31m[K^[m[K [34m[K~[m[K
+      |                         [32m[K|[m[K   [34m[K|[m[K
+      |                         [32m[Kint[m[K [34m[Kstd::vector<int>[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:64[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+  454 |     [01;36m[Koperator[m[K<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:331:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+  331 |     [01;36m[Koperator[m[K<(const reverse_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:331:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:369:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+  369 |     [01;36m[Koperator[m[K<(const reverse_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:369:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1160:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+ 1160 |     [01;36m[Koperator[m[K<(const move_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1160:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1166:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+ 1166 |     [01;36m[Koperator[m[K<(const move_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1166:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6229:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6229 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6229:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6242:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)[m[K’
+ 6242 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6242:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6254:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6254 |     [01;36m[Koperator[m[K<(const _CharT* __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6254:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:38[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1905:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+ 1905 |     [01;36m[Koperator[m[K<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1905:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/array:262:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+  262 |     [01;36m[Koperator[m[K<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/array:262:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:1432:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)[m[K’
+ 1432 |     [01;36m[Koperator[m[K<(const tuple<_TElements...>& __t,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:1432:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_Tps ...>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:749:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+  749 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:749:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+  760 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:766:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+  766 |     [01;36m[Koperator[m[K<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:766:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1444:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+ 1444 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1444:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1455:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+ 1455 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1455:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1463:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+ 1463 |     [01;36m[Koperator[m[K<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1463:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:413:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+  413 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:413:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:423:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+  423 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:423:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:431:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+  431 |     [01;36m[Koperator[m[K<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:431:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/system_error:208:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_code&, const std::error_code&)[m[K’
+  208 |   [01;36m[Koperator[m[K<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:208:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::error_code&[m[K’
+  208 |   operator<([01;36m[Kconst error_code& __lhs[m[K, const error_code& __rhs) noexcept
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:282:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_condition&, const std::error_condition&)[m[K’
+  282 |   [01;36m[Koperator[m[K<(const error_condition& __lhs,
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:282:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::error_condition&[m[K’
+  282 |   operator<([01;36m[Kconst error_condition& __lhs[m[K,
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/future:39[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/thread:290:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(std::thread::id, std::thread::id)[m[K’
+  290 |   [01;36m[Koperator[m[K<(thread::id __x, thread::id __y) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/thread:290:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::thread::id[m[K’
+  290 |   operator<([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+      |             [01;36m[K~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/set:61[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_set.h:996:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)[m[K’
+  996 |     [01;36m[Koperator[m[K<(const set<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_set.h:996:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::set<_Key, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/set:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:981:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)[m[K’
+  981 |     [01;36m[Koperator[m[K<(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:981:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multiset<_Key, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/list:63[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_list.h:2025:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+ 2025 |     [01;36m[Koperator[m[K<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:2025:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/map:61[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_map.h:1472:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)[m[K’
+ 1472 |     [01;36m[Koperator[m[K<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_map.h:1472:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/map:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1136:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)[m[K’
+ 1136 |     [01;36m[Koperator[m[K<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1136:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:312:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Ref, class _Ptr> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)[m[K’
+  312 |     [01;36m[Koperator[m[K<(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:312:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:320:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)[m[K’
+  320 |     [01;36m[Koperator[m[K<(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:320:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2330:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)[m[K’
+ 2330 |     [01;36m[Koperator[m[K<(const deque<_Tp, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2330:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:912:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)[m[K’
+  912 |     [01;36m[Koperator[m[K<(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:912:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_IteratorL, _Container>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:919:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)[m[K’
+  919 |     [01;36m[Koperator[m[K<(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:919:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:29:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iterator, _Container>[m[K’ and ‘[01m[Kint[m[K’
+  196 |         for (int j = 0; j < [01;36m[Km[m[K; ++j) {
+      |                             [01;36m[K^[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:23:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>[m[K’)
+  209 |     for (int i = 0; [32m[Ki[m[K [01;31m[K<[m[K [34m[Kn[m[K; ++i) {
+      |                     [32m[K~[m[K [01;31m[K^[m[K [34m[K~[m[K
+      |                     [32m[K|[m[K   [34m[K|[m[K
+      |                     [32m[Kint[m[K [34m[Kstd::vector<int>[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:64[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+  454 |     [01;36m[Koperator[m[K<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_pair.h:454:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:331:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+  331 |     [01;36m[Koperator[m[K<(const reverse_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:331:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:369:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+  369 |     [01;36m[Koperator[m[K<(const reverse_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:369:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1160:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+ 1160 |     [01;36m[Koperator[m[K<(const move_iterator<_IteratorL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1160:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1166:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+ 1166 |     [01;36m[Koperator[m[K<(const move_iterator<_Iterator>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:1166:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6229:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6229 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6229:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6242:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)[m[K’
+ 6242 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6242:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6254:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6254 |     [01;36m[Koperator[m[K<(const _CharT* __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6254:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:38[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1905:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+ 1905 |     [01;36m[Koperator[m[K<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:1905:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/array:262:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+  262 |     [01;36m[Koperator[m[K<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/array:262:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/tuple:1432:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)[m[K’
+ 1432 |     [01;36m[Koperator[m[K<(const tuple<_TElements...>& __t,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/tuple:1432:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_Tps ...>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:749:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+  749 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:749:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+  760 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:760:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:766:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+  766 |     [01;36m[Koperator[m[K<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/unique_ptr.h:766:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1444:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+ 1444 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1444:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1455:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+ 1455 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1455:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1463:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+ 1463 |     [01;36m[Koperator[m[K<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr_base.h:1463:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:413:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+  413 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:413:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:423:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+  423 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:423:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:20[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:431:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+  431 |     [01;36m[Koperator[m[K<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:431:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<int>[m[K’ is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/9/future:38[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/system_error:208:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_code&, const std::error_code&)[m[K’
+  208 |   [01;36m[Koperator[m[K<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:208:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::error_code&[m[K’
+  208 |   operator<([01;36m[Kconst error_code& __lhs[m[K, const error_code& __rhs) noexcept
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:282:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_condition&, const std::error_condition&)[m[K’
+  282 |   [01;36m[Koperator[m[K<(const error_condition& __lhs,
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/system_error:282:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::error_condition&[m[K’
+  282 |   operator<([01;36m[Kconst error_condition& __lhs[m[K,
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/future:39[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/thread:290:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(std::thread::id, std::thread::id)[m[K’
+  290 |   [01;36m[Koperator[m[K<(thread::id __x, thread::id __y) noexcept
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/thread:290:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::thread::id[m[K’
+  290 |   operator<([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+      |             [01;36m[K~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/set:61[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_set.h:996:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)[m[K’
+  996 |     [01;36m[Koperator[m[K<(const set<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_set.h:996:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::set<_Key, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/set:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:981:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)[m[K’
+  981 |     [01;36m[Koperator[m[K<(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multiset.h:981:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multiset<_Key, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/list:63[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_list.h:2025:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+ 2025 |     [01;36m[Koperator[m[K<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:2025:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/map:61[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_map.h:1472:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)[m[K’
+ 1472 |     [01;36m[Koperator[m[K<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_map.h:1472:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/map:62[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:5[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1136:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)[m[K’
+ 1136 |     [01;36m[Koperator[m[K<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_multimap.h:1136:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:312:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Ref, class _Ptr> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)[m[K’
+  312 |     [01;36m[Koperator[m[K<(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:312:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:320:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)[m[K’
+  320 |     [01;36m[Koperator[m[K<(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:320:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::_Deque_iterator<_Tp, _Ref, _Ptr>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/deque:67[m[K,
+                 from [01m[K/usr/include/boost/detail/container_fwd.hpp:91[m[K,
+                 from [01m[K/usr/include/boost/container_hash/extensions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/container_hash/hash.hpp:760[m[K,
+                 from [01m[K/usr/include/boost/functional/hash.hpp:6[m[K,
+                 from [01m[K/usr/include/boost/thread/detail/thread.hpp:41[m[K,
+                 from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/usr/include/boost/thread.hpp:13[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:7[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2330:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)[m[K’
+ 2330 |     [01;36m[Koperator[m[K<(const deque<_Tp, _Alloc>& __x,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_deque.h:2330:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:912:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)[m[K’
+  912 |     [01;36m[Koperator[m[K<(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:912:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_IteratorL, _Container>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/string:40[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/IDataStreamClientBase.h:37[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/DataStreamClient.h:16[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/include/vicon_unlabeled_marker_receiver/communicator.hpp:4[m[K,
+                 from [01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:919:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)[m[K’
+  919 |     [01;36m[Koperator[m[K<(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:919:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iterator, _Container>[m[K’ and ‘[01m[Kint[m[K’
+  209 |     for (int i = 0; i < [01;36m[Kn[m[K; ++i) {
+      |                         [01;36m[K^[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:214:12:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kresult[m[K’ from ‘[01m[Kstd::vector<std::pair<int, int> >[m[K’ to ‘[01m[Kstd::pair<std::vector<std::pair<int, int> >, double>[m[K’
+  214 |     return [01;31m[Kresult[m[K;
+      |            [01;31m[K^~~~~~[m[K
+      |            [01;31m[K|[m[K
+      |            [01;31m[Kstd::vector<std::pair<int, int> >[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[KViconDataStreamSDK::CPP::Output_GetTimecode ViconReceiver::UnlabeledMarker::Communicator::getPreviousTimecode()[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:229:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_timecode[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  229 |     Output_GetTimecode [01;35m[Kprev_timecode[m[K;
+      |                        [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kvoid ViconReceiver::UnlabeledMarker::Communicator::get_frame()[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:266:10:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  266 |     auto [01;35m[K[[m[Kassignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
+      |          [01;35m[K^[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:267:22:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  267 |     for (const auto& [01;35m[K[[m[Kcurrent_idx, prev_idx] : assignment) {
+      |                      [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/vicon_client_unlabeled.dir/build.make:63: CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:156: CMakeFiles/vicon_client_unlabeled.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

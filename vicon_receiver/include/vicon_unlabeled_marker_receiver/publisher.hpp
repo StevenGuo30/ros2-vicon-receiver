@@ -9,6 +9,7 @@ namespace UnlabeledMarker {
 
 // Struct used to hold segment data to transmit to the Publisher class.
 struct MarkersStruct {
+  MarkersStruct(){}
   // Constructor
   MarkersStruct(std::size_t size, unsigned int frame_number)
       : frame_number(frame_number) {

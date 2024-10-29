@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from vicon_receiver/msg/MarkersList.msg
+// generated code does not contain a copyright notice
+
+
+module vicon_receiver {
+  module msg {
+    struct MarkersList {
+      sequence<double> x;
+
+      sequence<double> y;
+
+      sequence<double> z;
+
+      sequence<double> vx;
+
+      sequence<double> vy;
+
+      sequence<double> vz;
+
+      sequence<double> speed;
+
+      sequence<int32> indices;
+
+      int32 frame_number;
+    };
+  };
+};

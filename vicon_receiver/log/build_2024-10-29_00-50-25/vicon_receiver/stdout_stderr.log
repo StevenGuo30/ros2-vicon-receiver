@@ -1,0 +1,189 @@
+[  2%] Built target vicon_receiver__cpp
+[ 10%] Built target vicon_receiver__rosidl_generator_c
+[ 32%] Built target vicon_receiver__rosidl_typesupport_c
+[ 32%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp
+[ 36%] Built target vicon_receiver__rosidl_typesupport_introspection_c
+[ 42%] Built target vicon_receiver__rosidl_typesupport_cpp
+[ 51%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp
+[ 59%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c
+[ 59%] Built target vicon_receiver
+[35m[1mScanning dependencies of target vicon_client_unlabeled[0m
+[ 61%] Built target vicon_receiver__py
+[ 69%] Built target vicon_client_mock
+[ 75%] Built target vicon_client
+[ 77%] [32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o[0m
+[ 83%] Built target vicon_receiver__python
+[ 89%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext
+[ 91%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext
+[ 95%] Built target vicon_receiver__rosidl_typesupport_c__pyext
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kint ViconReceiver::UnlabeledMarker::Communicator::findMajorityElement(std::vector<long unsigned int>&)[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:82:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   82 |   for (int i = 1; [01;35m[Ki < nums.size()[m[K; i++) {
+      |                   [01;35m[K~~^~~~~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:86:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<long unsigned int>, long unsigned int>::value_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   86 |     } else if (majority == nums[i]) {
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:102:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  102 |   if ([01;35m[Kcount <= nums.size() / 2[m[K) {
+      |       [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kstd::pair<std::vector<std::pair<int, int> >, double> ViconReceiver::UnlabeledMarker::Communicator::findOptimalAssignment(const MarkersStruct&, const MarkersStruct&)[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  195 |     for (int i = 0; [01;35m[Ki < n.size()[m[K; ++i) {
+      |                     [01;35m[K~~^~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  196 |         for (int j = 0; [01;35m[Kj < m.size()[m[K; ++j) {
+      |                         [01;35m[K~~^~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  209 |     for (int i = 0; [01;35m[Ki < n.size()[m[K; ++i) {
+      |                     [01;35m[K~~^~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[KViconDataStreamSDK::CPP::Output_GetTimecode ViconReceiver::UnlabeledMarker::Communicator::getPreviousTimecode()[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:229:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kprev_timecode[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  229 |     Output_GetTimecode [01;35m[Kprev_timecode[m[K;
+      |                        [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:[m[K In member function ‘[01m[Kvoid ViconReceiver::UnlabeledMarker::Communicator::get_frame()[m[K’:
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:266:10:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  266 |     auto [01;35m[K[[m[Kassignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
+      |          [01;35m[K^[m[K
+[01m[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:267:22:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  267 |     for (const auto& [01;35m[K[[m[Kcurrent_idx, prev_idx] : assignment) {
+      |                      [01;35m[K^[m[K
+[ 97%] [32m[1mLinking CXX executable vicon_client_unlabeled[0m
+[100%] Built target vicon_client_unlabeled
+-- Install configuration: ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/rosidl_interfaces/vicon_receiver
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/posture.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__struct.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__struct.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__functions.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__functions.c
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__functions.c
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__functions.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/markers_list.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/library_path.sh
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/library_path.dsv
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_generator_c.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_generator_c.so" to ""
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_fastrtps_c.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_fastrtps_c.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/dds_fastrtps
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_introspection_c.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_introspection_c.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.c
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.c
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_c.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__builder.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__struct.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__traits.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__struct.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__traits.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__builder.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/posture.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/markers_list.hpp
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg
+-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.cpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.cpp
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_cpp.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_cpp.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/pythonpath.sh
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/pythonpath.dsv
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/__init__.py
+Compiling '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/__init__.py'...
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_markers_list_s.c
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_markers_list.py
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_posture_s.c
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_posture.py
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/__init__.py
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__python.so
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__python.so" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/Posture.idl
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/MarkersList.idl
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/Posture.msg
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/MarkersList.msg
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_mock
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_mock" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_unlabeled
+-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_unlabeled" to ""
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch/mock_client.launch.py
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch/client_unlabeled.launch.py
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch/client.launch.py
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/package_run_dependencies/vicon_receiver
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/parent_prefix_path/vicon_receiver
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/ament_prefix_path.sh
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/ament_prefix_path.dsv
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/path.sh
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/path.dsv
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.bash
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.sh
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.zsh
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.dsv
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/package.dsv
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/packages/vicon_receiver
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_generator_cExport.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cExport.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_generator_cppExport.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cppExport.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/rosidl_cmake-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiverConfig.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiverConfig-version.cmake
+-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/package.xml

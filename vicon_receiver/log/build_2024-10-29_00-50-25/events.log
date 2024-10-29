@@ -1,0 +1,310 @@
+[0.000000] (-) TimerEvent: {}
+[0.000381] (vicon_receiver) JobQueued: {'identifier': 'vicon_receiver', 'dependencies': OrderedDict()}
+[0.000466] (vicon_receiver) JobStarted: {'identifier': 'vicon_receiver'}
+[0.024941] (vicon_receiver) JobProgress: {'identifier': 'vicon_receiver', 'progress': 'cmake'}
+[0.025943] (vicon_receiver) JobProgress: {'identifier': 'vicon_receiver', 'progress': 'build'}
+[0.027572] (vicon_receiver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver', '--', '-j8', '-l8'], 'cwd': '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver', 'env': OrderedDict([('WS', '/vicon_ws'), ('HOSTNAME', '1cb5f868ed4c'), ('GIT_ASKPASS', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/vicon_ws/install/vicon_receiver/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/vicon_GJM_test/ros2-vicon-receiver'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-25c155c9-f969-435c-913d-5216409ed7ea.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/vicon_GJM_test/ros2-vicon-receiver/install:/vicon_ws/install'), ('ROS_DISTRO', 'foxy'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock","/tmp/.X11-unix/X5"]'), ('DISPLAY', ':5'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e669ff0355.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('AMENT_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy'), ('DEBIAN_FRONTEND', 'noninteractive'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/vicon_ws/install/vicon_receiver/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy')]), 'shell': False}
+[0.099106] (-) TimerEvent: {}
+[0.131186] (vicon_receiver) StdoutLine: {'line': b'[  2%] Built target vicon_receiver__cpp\n'}
+[0.133391] (vicon_receiver) StdoutLine: {'line': b'[ 10%] Built target vicon_receiver__rosidl_generator_c\n'}
+[0.174840] (vicon_receiver) StdoutLine: {'line': b'[ 32%] Built target vicon_receiver__rosidl_typesupport_c\n'}
+[0.175216] (vicon_receiver) StdoutLine: {'line': b'[ 32%] Built target vicon_receiver__rosidl_typesupport_introspection_cpp\n'}
+[0.175859] (vicon_receiver) StdoutLine: {'line': b'[ 36%] Built target vicon_receiver__rosidl_typesupport_introspection_c\n'}
+[0.176070] (vicon_receiver) StdoutLine: {'line': b'[ 42%] Built target vicon_receiver__rosidl_typesupport_cpp\n'}
+[0.180045] (vicon_receiver) StdoutLine: {'line': b'[ 51%] Built target vicon_receiver__rosidl_typesupport_fastrtps_cpp\n'}
+[0.200214] (-) TimerEvent: {}
+[0.215933] (vicon_receiver) StdoutLine: {'line': b'[ 59%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c\n'}
+[0.242888] (vicon_receiver) StdoutLine: {'line': b'[ 59%] Built target vicon_receiver\n'}
+[0.263901] (vicon_receiver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target vicon_client_unlabeled\x1b[0m\n'}
+[0.274831] (vicon_receiver) StdoutLine: {'line': b'[ 61%] Built target vicon_receiver__py\n'}
+[0.291813] (vicon_receiver) StdoutLine: {'line': b'[ 69%] Built target vicon_client_mock\n'}
+[0.293598] (vicon_receiver) StdoutLine: {'line': b'[ 75%] Built target vicon_client\n'}
+[0.301011] (-) TimerEvent: {}
+[0.305210] (vicon_receiver) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/vicon_client_unlabeled.dir/src/vicon_unlabeled_marker_receiver/communicator.cpp.o\x1b[0m\n'}
+[0.319533] (vicon_receiver) StdoutLine: {'line': b'[ 83%] Built target vicon_receiver__python\n'}
+[0.362055] (vicon_receiver) StdoutLine: {'line': b'[ 89%] Built target vicon_receiver__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.362775] (vicon_receiver) StdoutLine: {'line': b'[ 91%] Built target vicon_receiver__rosidl_typesupport_introspection_c__pyext\n'}
+[0.363603] (vicon_receiver) StdoutLine: {'line': b'[ 95%] Built target vicon_receiver__rosidl_typesupport_c__pyext\n'}
+[0.402287] (-) TimerEvent: {}
+[0.503048] (-) TimerEvent: {}
+[0.604175] (-) TimerEvent: {}
+[0.705044] (-) TimerEvent: {}
+[0.806111] (-) TimerEvent: {}
+[0.907120] (-) TimerEvent: {}
+[1.008092] (-) TimerEvent: {}
+[1.109245] (-) TimerEvent: {}
+[1.210138] (-) TimerEvent: {}
+[1.311262] (-) TimerEvent: {}
+[1.412258] (-) TimerEvent: {}
+[1.513089] (-) TimerEvent: {}
+[1.614056] (-) TimerEvent: {}
+[1.715090] (-) TimerEvent: {}
+[1.816182] (-) TimerEvent: {}
+[1.917251] (-) TimerEvent: {}
+[2.018092] (-) TimerEvent: {}
+[2.119210] (-) TimerEvent: {}
+[2.220602] (-) TimerEvent: {}
+[2.322089] (-) TimerEvent: {}
+[2.423460] (-) TimerEvent: {}
+[2.524466] (-) TimerEvent: {}
+[2.626200] (-) TimerEvent: {}
+[2.727230] (-) TimerEvent: {}
+[2.829239] (-) TimerEvent: {}
+[2.930418] (-) TimerEvent: {}
+[3.032094] (-) TimerEvent: {}
+[3.133394] (-) TimerEvent: {}
+[3.235420] (-) TimerEvent: {}
+[3.337048] (-) TimerEvent: {}
+[3.438137] (-) TimerEvent: {}
+[3.539262] (-) TimerEvent: {}
+[3.640250] (-) TimerEvent: {}
+[3.741023] (-) TimerEvent: {}
+[3.842067] (-) TimerEvent: {}
+[3.943046] (-) TimerEvent: {}
+[4.044130] (-) TimerEvent: {}
+[4.145220] (-) TimerEvent: {}
+[4.246098] (-) TimerEvent: {}
+[4.248867] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint ViconReceiver::UnlabeledMarker::Communicator::findMajorityElement(std::vector<long unsigned int>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.249131] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:82:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.249212] (vicon_receiver) StderrLine: {'line': b'   82 |   for (int i = 1; \x1b[01;35m\x1b[Ki < nums.size()\x1b[m\x1b[K; i++) {\n'}
+[4.249306] (vicon_receiver) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.249453] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:86:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[K__gnu_cxx::__alloc_traits<std::allocator<long unsigned int>, long unsigned int>::value_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.249599] (vicon_receiver) StderrLine: {'line': b'   86 |     } else if (majority == nums[i]) {\n'}
+[4.249997] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:102:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.250162] (vicon_receiver) StderrLine: {'line': b'  102 |   if (\x1b[01;35m\x1b[Kcount <= nums.size() / 2\x1b[m\x1b[K) {\n'}
+[4.250235] (vicon_receiver) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.264157] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<std::vector<std::pair<int, int> >, double> ViconReceiver::UnlabeledMarker::Communicator::findOptimalAssignment(const MarkersStruct&, const MarkersStruct&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.264328] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:195:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.264412] (vicon_receiver) StderrLine: {'line': b'  195 |     for (int i = 0; \x1b[01;35m\x1b[Ki < n.size()\x1b[m\x1b[K; ++i) {\n'}
+[4.264492] (vicon_receiver) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.264562] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:196:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.264637] (vicon_receiver) StderrLine: {'line': b'  196 |         for (int j = 0; \x1b[01;35m\x1b[Kj < m.size()\x1b[m\x1b[K; ++j) {\n'}
+[4.264703] (vicon_receiver) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.264997] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:209:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[4.265174] (vicon_receiver) StderrLine: {'line': b'  209 |     for (int i = 0; \x1b[01;35m\x1b[Ki < n.size()\x1b[m\x1b[K; ++i) {\n'}
+[4.265249] (vicon_receiver) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.268121] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KViconDataStreamSDK::CPP::Output_GetTimecode ViconReceiver::UnlabeledMarker::Communicator::getPreviousTimecode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.268408] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:229:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kprev_timecode\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[4.268649] (vicon_receiver) StderrLine: {'line': b'  229 |     Output_GetTimecode \x1b[01;35m\x1b[Kprev_timecode\x1b[m\x1b[K;\n'}
+[4.268864] (vicon_receiver) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.269881] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ViconReceiver::UnlabeledMarker::Communicator::get_frame()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.270079] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:266:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstructured bindings only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++17\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++17\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.270277] (vicon_receiver) StderrLine: {'line': b'  266 |     auto \x1b[01;35m\x1b[K[\x1b[m\x1b[Kassignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);\n'}
+[4.270354] (vicon_receiver) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[4.272805] (vicon_receiver) StderrLine: {'line': b'\x1b[01m\x1b[K/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/src/vicon_unlabeled_marker_receiver/communicator.cpp:267:22:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstructured bindings only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++17\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++17\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.273015] (vicon_receiver) StderrLine: {'line': b'  267 |     for (const auto& \x1b[01;35m\x1b[K[\x1b[m\x1b[Kcurrent_idx, prev_idx] : assignment) {\n'}
+[4.273094] (vicon_receiver) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[4.347160] (-) TimerEvent: {}
+[4.448285] (-) TimerEvent: {}
+[4.549213] (-) TimerEvent: {}
+[4.650251] (-) TimerEvent: {}
+[4.751019] (-) TimerEvent: {}
+[4.852263] (-) TimerEvent: {}
+[4.953168] (-) TimerEvent: {}
+[5.054173] (-) TimerEvent: {}
+[5.155084] (-) TimerEvent: {}
+[5.256258] (-) TimerEvent: {}
+[5.357107] (-) TimerEvent: {}
+[5.458245] (-) TimerEvent: {}
+[5.559170] (-) TimerEvent: {}
+[5.659947] (-) TimerEvent: {}
+[5.761157] (-) TimerEvent: {}
+[5.862088] (-) TimerEvent: {}
+[5.963102] (-) TimerEvent: {}
+[6.064089] (-) TimerEvent: {}
+[6.165036] (-) TimerEvent: {}
+[6.266376] (-) TimerEvent: {}
+[6.367253] (-) TimerEvent: {}
+[6.469672] (-) TimerEvent: {}
+[6.571274] (-) TimerEvent: {}
+[6.672110] (-) TimerEvent: {}
+[6.773040] (-) TimerEvent: {}
+[6.874102] (-) TimerEvent: {}
+[6.975137] (-) TimerEvent: {}
+[7.076132] (-) TimerEvent: {}
+[7.177162] (-) TimerEvent: {}
+[7.278266] (-) TimerEvent: {}
+[7.380165] (-) TimerEvent: {}
+[7.481109] (-) TimerEvent: {}
+[7.582054] (-) TimerEvent: {}
+[7.683103] (-) TimerEvent: {}
+[7.784219] (-) TimerEvent: {}
+[7.885065] (-) TimerEvent: {}
+[7.986091] (-) TimerEvent: {}
+[8.087014] (-) TimerEvent: {}
+[8.188044] (-) TimerEvent: {}
+[8.289226] (-) TimerEvent: {}
+[8.390234] (-) TimerEvent: {}
+[8.491159] (-) TimerEvent: {}
+[8.592233] (-) TimerEvent: {}
+[8.693103] (-) TimerEvent: {}
+[8.794062] (-) TimerEvent: {}
+[8.895163] (-) TimerEvent: {}
+[8.996151] (-) TimerEvent: {}
+[9.097067] (-) TimerEvent: {}
+[9.198085] (-) TimerEvent: {}
+[9.299139] (-) TimerEvent: {}
+[9.350985] (vicon_receiver) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX executable vicon_client_unlabeled\x1b[0m\n'}
+[9.400074] (-) TimerEvent: {}
+[9.501130] (-) TimerEvent: {}
+[9.602042] (-) TimerEvent: {}
+[9.703155] (-) TimerEvent: {}
+[9.803979] (-) TimerEvent: {}
+[9.905209] (-) TimerEvent: {}
+[9.932773] (vicon_receiver) StdoutLine: {'line': b'[100%] Built target vicon_client_unlabeled\n'}
+[9.947644] (vicon_receiver) CommandEnded: {'returncode': 0}
+[10.006283] (-) TimerEvent: {}
+[10.107625] (-) TimerEvent: {}
+[10.128571] (vicon_receiver) JobProgress: {'identifier': 'vicon_receiver', 'progress': 'install'}
+[10.158638] (vicon_receiver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver'], 'cwd': '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver', 'env': OrderedDict([('WS', '/vicon_ws'), ('HOSTNAME', '1cb5f868ed4c'), ('GIT_ASKPASS', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/vicon_ws/install/vicon_receiver/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/vicon_GJM_test/ros2-vicon-receiver'), ('TERM_PROGRAM_VERSION', '1.93.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-25c155c9-f969-435c-913d-5216409ed7ea.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/vicon_GJM_test/ros2-vicon-receiver/install:/vicon_ws/install'), ('ROS_DISTRO', 'foxy'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/root/.vscode-server/bin/38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock","/tmp/.X11-unix/X5"]'), ('DISPLAY', ':5'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-e669ff0355.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-e2c8abca-b72d-47f7-b3bd-57c4cae5c274.sock'), ('AMENT_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy'), ('DEBIAN_FRONTEND', 'noninteractive'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X5'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/build/vicon_receiver'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/vicon_ws/install/vicon_receiver/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/vicon_ws/install/vicon_receiver:/opt/ros/foxy')]), 'shell': False}
+[10.182614] (vicon_receiver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.183501] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/rosidl_interfaces/vicon_receiver\n'}
+[10.185667] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver\n'}
+[10.188029] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg\n'}
+[10.188709] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/posture.h\n'}
+[10.189254] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail\n'}
+[10.189518] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__struct.h\n'}
+[10.190109] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.h\n'}
+[10.190365] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__struct.h\n'}
+[10.191087] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.h\n'}
+[10.192049] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__functions.h\n'}
+[10.194640] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__functions.c\n'}
+[10.196216] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__functions.c\n'}
+[10.197296] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__functions.h\n'}
+[10.200739] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.202491] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/markers_list.h\n'}
+[10.203366] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/library_path.sh\n'}
+[10.205366] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/library_path.dsv\n'}
+[10.206267] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_generator_c.so\n'}
+[10.208181] (-) TimerEvent: {}
+[10.212064] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_generator_c.so" to ""\n'}
+[10.212704] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver\n'}
+[10.212967] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg\n'}
+[10.213310] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.213522] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail\n'}
+[10.214814] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_fastrtps_c.h\n'}
+[10.215824] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_fastrtps_c.h\n'}
+[10.217253] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_c.so\n'}
+[10.246216] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.246536] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver\n'}
+[10.247036] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg\n'}
+[10.247443] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.249243] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail\n'}
+[10.253200] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.253809] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.254278] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/dds_fastrtps\n'}
+[10.255744] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.268646] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.269245] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver\n'}
+[10.269979] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg\n'}
+[10.270175] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail\n'}
+[10.270294] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_introspection_c.h\n'}
+[10.272751] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_introspection_c.h\n'}
+[10.273290] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.c\n'}
+[10.274459] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.c\n'}
+[10.275209] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.276082] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_c.so\n'}
+[10.279789] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.280276] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_c.so\n'}
+[10.284186] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_c.so" to ""\n'}
+[10.284974] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver\n'}
+[10.285325] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg\n'}
+[10.285407] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail\n'}
+[10.285478] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__builder.hpp\n'}
+[10.287010] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__struct.hpp\n'}
+[10.287964] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__traits.hpp\n'}
+[10.289846] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__struct.hpp\n'}
+[10.291129] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.hpp\n'}
+[10.292226] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.hpp\n'}
+[10.293003] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__traits.hpp\n'}
+[10.293313] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__builder.hpp\n'}
+[10.293485] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/posture.hpp\n'}
+[10.293992] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[10.294169] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/markers_list.hpp\n'}
+[10.294387] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver\n'}
+[10.294487] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg\n'}
+[10.295026] (vicon_receiver) StdoutLine: {'line': b'-- Up-to-date: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail\n'}
+[10.295687] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.296634] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__type_support.cpp\n'}
+[10.297246] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/markers_list__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.297724] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/include/vicon_receiver/msg/detail/posture__type_support.cpp\n'}
+[10.298323] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_cpp.so\n'}
+[10.300149] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.300305] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_cpp.so\n'}
+[10.302395] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__rosidl_typesupport_cpp.so" to ""\n'}
+[10.302640] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/pythonpath.sh\n'}
+[10.304569] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/pythonpath.dsv\n'}
+[10.308465] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/__init__.py\n'}
+[10.308583] (-) TimerEvent: {}
+[10.369490] (vicon_receiver) StdoutLine: {'line': b"Compiling '/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/__init__.py'...\n"}
+[10.376720] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg\n'}
+[10.377607] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_markers_list_s.c\n'}
+[10.379396] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_markers_list.py\n'}
+[10.380509] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_posture_s.c\n'}
+[10.381170] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/_posture.py\n'}
+[10.382995] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/msg/__init__.py\n'}
+[10.384487] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[10.386801] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[10.387114] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[10.388803] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[10.389194] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[10.390823] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/python3.8/site-packages/vicon_receiver/vicon_receiver_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[10.391141] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__python.so\n'}
+[10.394857] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/libvicon_receiver__python.so" to ""\n'}
+[10.396210] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/Posture.idl\n'}
+[10.397491] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/MarkersList.idl\n'}
+[10.398189] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/Posture.msg\n'}
+[10.399082] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/msg/MarkersList.msg\n'}
+[10.403010] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client\n'}
+[10.409186] (-) TimerEvent: {}
+[10.509996] (-) TimerEvent: {}
+[10.545661] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client" to ""\n'}
+[10.545866] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_mock\n'}
+[10.611135] (-) TimerEvent: {}
+[10.705237] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_mock" to ""\n'}
+[10.706334] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_unlabeled\n'}
+[10.712330] (-) TimerEvent: {}
+[10.712988] (vicon_receiver) StdoutLine: {'line': b'-- Set runtime path of "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/lib/vicon_receiver/vicon_client_unlabeled" to ""\n'}
+[10.713264] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch\n'}
+[10.713366] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch/mock_client.launch.py\n'}
+[10.714278] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch/client_unlabeled.launch.py\n'}
+[10.715014] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver//launch/client.launch.py\n'}
+[10.716498] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/package_run_dependencies/vicon_receiver\n'}
+[10.717812] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/parent_prefix_path/vicon_receiver\n'}
+[10.718451] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/ament_prefix_path.sh\n'}
+[10.719637] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/ament_prefix_path.dsv\n'}
+[10.720147] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/path.sh\n'}
+[10.720761] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/environment/path.dsv\n'}
+[10.721239] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.bash\n'}
+[10.721870] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.sh\n'}
+[10.723505] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.zsh\n'}
+[10.723864] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/local_setup.dsv\n'}
+[10.725126] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/package.dsv\n'}
+[10.727125] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/ament_index/resource_index/packages/vicon_receiver\n'}
+[10.732715] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_generator_cExport.cmake\n'}
+[10.734338] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_generator_cExport-noconfig.cmake\n'}
+[10.736788] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cExport.cmake\n'}
+[10.737979] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[10.740070] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cExport.cmake\n'}
+[10.744223] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[10.745417] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_generator_cppExport.cmake\n'}
+[10.748255] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[10.750030] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[10.751544] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cppExport.cmake\n'}
+[10.752761] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiver__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[10.754032] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/rosidl_cmake-extras.cmake\n'}
+[10.754537] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[10.755576] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.756068] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.756448] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[10.759114] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[10.759952] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[10.761443] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiverConfig.cmake\n'}
+[10.762025] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/cmake/vicon_receiverConfig-version.cmake\n'}
+[10.763464] (vicon_receiver) StdoutLine: {'line': b'-- Installing: /vicon_GJM_test/ros2-vicon-receiver/vicon_receiver/install/vicon_receiver/share/vicon_receiver/package.xml\n'}
+[10.771535] (vicon_receiver) CommandEnded: {'returncode': 0}
+[10.815946] (-) TimerEvent: {}
+[10.917276] (-) TimerEvent: {}
+[11.017969] (-) TimerEvent: {}
+[11.040397] (vicon_receiver) JobEnded: {'identifier': 'vicon_receiver', 'rc': 0}
+[11.042008] (-) EventReactorShutdown: {}

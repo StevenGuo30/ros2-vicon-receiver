@@ -133,8 +133,8 @@ double Communicator::calculateDistance(const std::vector<double>& a, const std::
 }
 
 std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix) {
-    int n = costMatrix.size();
-    int m = costMatrix[0].size();
+    std::size_t n = costMatrix.size();
+    std::size_t m = costMatrix[0].size();
     std::vector<int> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
     for (int i = 1; i <= n; ++i) {
         std::vector<int> minv(m + 1, std::numeric_limits<int>::max());
@@ -187,13 +187,13 @@ std::pair<std::vector<std::pair<int, int>>, double> Communicator::findOptimalAss
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker) {
     
-    std::vector<int>  n = current_marker.indices;
-    std::vector<int>  m = prev_marker.indices;
-    std::vector<std::vector<double>> costMatrix(n.size(), std::vector<double>(m.size()));
+    std::size_t n = current_marker.indices.size();
+    std::size_t m = prev_marker.indices.size();
+    std::vector<std::vector<double>> costMatrix(n, std::vector<double>(m));
     
     // Calculate the cost matrix
-    for (int i = 0; i < n.size(); ++i) {
-        for (int j = 0; j < m.size(); ++j) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j) {
             std::vector<double> current_marker_pos = {current_marker.x[i], current_marker.y[i], current_marker.z[i]};
             std::vector<double> prev_marker_pos = {prev_marker.x[j], prev_marker.y[j], prev_marker.z[j]};
             costMatrix[i][j] = calculateDistance(current_marker_pos, prev_marker_pos);
@@ -206,10 +206,10 @@ std::pair<std::vector<std::pair<int, int>>, double> Communicator::findOptimalAss
     // Create the result as pairs of (current_marker index, prev_marker index)
     std::vector<std::pair<int, int>> result;
     double totalCost = 0;
-    for (int i = 0; i < n.size(); ++i) {
-        result.emplace_back(i, assignment[i]);
-        totalCost += costMatrix[i][assignment[i]]; // Sum the cost for each assignment
-    }
+    // for (int i = 0; i < n; ++i) {
+    //     result.emplace_back(i, assignment[i]);
+    //     totalCost += costMatrix[i][assignment[i]]; // Sum the cost for each assignment
+    // }
     
     return std::make_pair(result, totalCost);
 }
@@ -263,7 +263,10 @@ void Communicator::get_frame() {
 
   if (!is_first_frame){
     double delta_time = CalculateDeltaTime(timecode, prev_timecode);
+    std::cout << delta_time << std::endl;
+
     auto [assignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
+    // std::cout << "Total cost: " << totalCost << std::endl;
     for (const auto& [current_idx, prev_idx] : assignment) {
       current_markers.vx[current_idx] = (current_markers.x[current_idx] - prev_markers.x[prev_idx])/delta_time;
       current_markers.vy[current_idx] = (current_markers.y[current_idx] - prev_markers.y[prev_idx])/delta_time;
@@ -275,12 +278,11 @@ void Communicator::get_frame() {
   Communicator::previous_timecode = timecode;
   is_first_frame = false; // set to false after first frame
 
-
   // send position to publisher
   map<string, Publisher>::iterator pub_it;
   boost::mutex::scoped_try_lock lock(mutex);
   const string subject_name = "unlabeled_markers";
-  const string segment_name = "positions_velocities";
+  const string segment_name = "positions_velocity";
 
   if (lock.owns_lock()) {
     // get publisher

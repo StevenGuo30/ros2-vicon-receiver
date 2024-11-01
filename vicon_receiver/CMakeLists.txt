@@ -49,6 +49,15 @@ add_executable(
 target_link_libraries(vicon_client_unlabeled ViconDataStreamSDK_CPP ${Boost_LIBRARIES})
 ament_target_dependencies(vicon_client_unlabeled "rclcpp")
 
+# add_executable(
+#   vicon_client_unlabeled_mock
+#   src/vicon_unlabeled_marker_receiver_mock/communicator.cpp
+#   src/vicon_unlabeled_marker_receiver_mock/publisher.cpp
+#   src/vicon_unlabeled_marker_receiver_mock/data.cpp
+# )
+# target_link_libraries(vicon_client_unlabeled_mock ViconDataStreamSDK_CPP ${Boost_LIBRARIES})
+# ament_target_dependencies(vicon_client_unlabeled_mock "rclcpp")
+
 add_executable(
   vicon_client_mock
   src/vicon_receiver_mock/communicator.cpp
@@ -72,9 +81,13 @@ foreach(typesupport_impl ${typesupport_impls})
   rosidl_target_interfaces(vicon_client_unlabeled
     ${PROJECT_NAME} "rosidl_typesupport_cpp"
   )
+  # rosidl_target_interfaces(vicon_client_unlabeled_mock
+  #   ${PROJECT_NAME} "rosidl_typesupport_cpp"
+  # )
 endforeach()
 
 install(TARGETS vicon_client vicon_client_mock vicon_client_unlabeled DESTINATION lib/${PROJECT_NAME})
+# install(TARGETS vicon_client vicon_client_mock vicon_client_unlabeled vicon_client_unlabeled_mock DESTINATION lib/${PROJECT_NAME})
 
 # Install launch file
 install(DIRECTORY

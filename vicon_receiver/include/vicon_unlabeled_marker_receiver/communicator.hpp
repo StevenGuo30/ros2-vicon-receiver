@@ -31,6 +31,7 @@ private:
   string ns_name;
   map<string, Publisher> pub_map;
   boost::mutex mutex;
+  
   MarkersStruct previous_markers;
   ViconDataStreamSDK::CPP::Output_GetTimecode previous_timecode;
 
@@ -54,7 +55,7 @@ public:
                                const string segment_name);
 
   int findMajorityElement(std::vector<std::size_t>& nums);
-  double CalculateDeltaTime(ViconDataStreamSDK::CPP::Output_GetTimecode& current, ViconDataStreamSDK::CPP::Output_GetTimecode& previous);
+  double CalculateDeltaTime(const ViconDataStreamSDK::CPP::Output_GetTimecode& current, const ViconDataStreamSDK::CPP::Output_GetTimecode& previous);
   double calculateDistance(const std::vector<double>& a, const std::vector<double>& b);
   std::vector<int> hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix);
   std::pair<std::vector<std::pair<int, int>>, double> findOptimalAssignment(

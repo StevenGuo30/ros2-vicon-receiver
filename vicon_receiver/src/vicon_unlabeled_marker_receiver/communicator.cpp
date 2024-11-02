@@ -107,7 +107,7 @@ int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
 }
 
 // Calculate the time difference between two timecodes
-double Communicator::CalculateDeltaTime(Output_GetTimecode& current, Output_GetTimecode& previous) {
+double Communicator::CalculateDeltaTime(const Output_GetTimecode& current, const Output_GetTimecode& previous) {
     // Convert current timecode to total seconds
     double currentTimeInSeconds = current.Hours * 3600.0 +
                                   current.Minutes * 60.0 +
@@ -123,9 +123,8 @@ double Communicator::CalculateDeltaTime(Output_GetTimecode& current, Output_GetT
                                    previous.SubFrame / static_cast<double>(previous.SubFramesPerFrame * previous.SubFramesPerFrame);
 
     // Calculate delta time
-    double deltaTime = currentTimeInSeconds - previousTimeInSeconds;
+    return currentTimeInSeconds - previousTimeInSeconds;
 
-    return deltaTime;
 }
 
 double Communicator::calculateDistance(const std::vector<double>& a, const std::vector<double>& b) {
@@ -135,19 +134,29 @@ double Communicator::calculateDistance(const std::vector<double>& a, const std::
 std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix) {
     std::size_t n = costMatrix.size();
     std::size_t m = costMatrix[0].size();
+    std::cout << "  HA " << n << " " << m << std::endl;
     std::vector<int> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
+    std::vector<int> minv(m + 1, std::numeric_limits<int>::max());
+    std::vector<bool> used(m + 1, false);
+
+    int i0;
+    int j0, j1;
+    int delta, cur;
     for (int i = 1; i <= n; ++i) {
-        std::vector<int> minv(m + 1, std::numeric_limits<int>::max());
-        std::vector<bool> used(m + 1, false);
-        int j0 = 0;
+        // initialize minv and used
+        std::fill(minv.begin(), minv.end(), std::numeric_limits<int>::max());
+        std::fill(used.begin(), used.end(), false);
+
+        j0 = 0;
         p[0] = i;
         do {
             used[j0] = true;
-            int i0 = p[j0], j1;
-            int delta = std::numeric_limits<int>::max();
+            i0 = p[j0];
+            
+            delta = std::numeric_limits<int>::max();
             for (int j = 1; j <= m; ++j) {
                 if (!used[j]) {
-                    int cur = costMatrix[i0 - 1][j - 1] - u[i0] - v[j];
+                    cur = costMatrix[i0 - 1][j - 1] - u[i0] - v[j];
                     if (cur < minv[j]) {
                         minv[j] = cur;
                         way[j] = j0;
@@ -168,8 +177,9 @@ std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<
             }
             j0 = j1;
         } while (p[j0] != 0);
+
         do {
-            int j1 = way[j0];
+            j1 = way[j0];
             p[j0] = p[j1];
             j0 = j1;
         } while (j0);
@@ -190,26 +200,27 @@ std::pair<std::vector<std::pair<int, int>>, double> Communicator::findOptimalAss
     std::size_t n = current_marker.indices.size();
     std::size_t m = prev_marker.indices.size();
     std::vector<std::vector<double>> costMatrix(n, std::vector<double>(m));
-    
+    std::vector<double> current_marker_pos(3), prev_marker_pos(3);
+
     // Calculate the cost matrix
     for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
-            std::vector<double> current_marker_pos = {current_marker.x[i], current_marker.y[i], current_marker.z[i]};
-            std::vector<double> prev_marker_pos = {prev_marker.x[j], prev_marker.y[j], prev_marker.z[j]};
+        current_marker_pos = {current_marker.x[i], current_marker.y[i], current_marker.z[i]};
+        for (int j = 0; j < m; ++j) {    
+            prev_marker_pos = {prev_marker.x[j], prev_marker.y[j], prev_marker.z[j]};
             costMatrix[i][j] = calculateDistance(current_marker_pos, prev_marker_pos);
         }
     }
     
-    // Apply Hungarian Algorithm to find the optimal assignment
+    // // Apply Hungarian Algorithm to find the optimal assignment
     std::vector<int> assignment = hungarianAlgorithm(costMatrix);
     
     // Create the result as pairs of (current_marker index, prev_marker index)
     std::vector<std::pair<int, int>> result;
     double totalCost = 0;
-    // for (int i = 0; i < n; ++i) {
-    //     result.emplace_back(i, assignment[i]);
-    //     totalCost += costMatrix[i][assignment[i]]; // Sum the cost for each assignment
-    // }
+    for (int i = 0; i < n; ++i) {
+        result.emplace_back(i, assignment[i]);
+        totalCost += costMatrix[i][assignment[i]]; // Sum the cost for each assignment
+    }
     
     return std::make_pair(result, totalCost);
 }
@@ -244,9 +255,22 @@ void Communicator::get_frame() {
 
   vicon_client.GetFrame();
   Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
+  std::cout << frame_number.Result << ' ' <<  frame_number.FrameNumber << std::endl;
   Output_GetTimecode timecode = vicon_client.GetTimecode();
-  marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
-  std::size_t marker_count = findMajorityElement(marker_count_total);
+  std::cout << timecode.Hours << ":" << timecode.Minutes << ":" << timecode.Seconds << ":" << timecode.Frames << std::endl;
+
+  // std::cout << frame_number.FrameNumber << std::endl;
+
+  // marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
+  // std::size_t marker_count = findMajorityElement(marker_count_total);
+  Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
+  if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
+    std::cout << "Error: " << unlabeled_marker_count.Result << '\n';
+    std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
+    return;
+  }
+  std::size_t marker_count = unlabeled_marker_count.MarkerCount;
+  std::cout << "marker count: " << marker_count << std::endl;
 
   MarkersStruct current_markers(marker_count, frame_number.FrameNumber);
   for (std::size_t i = 0; i < marker_count; i++) {
@@ -259,11 +283,11 @@ void Communicator::get_frame() {
   }
 
   MarkersStruct prev_markers = Communicator::getPreviousMarkers();
-  Output_GetTimecode prev_timecode = Communicator::getPreviousTimecode();
+  // Output_GetTimecode prev_timecode = Communicator::getPreviousTimecode();
 
   if (!is_first_frame){
-    double delta_time = CalculateDeltaTime(timecode, prev_timecode);
-    std::cout << delta_time << std::endl;
+    double delta_time = 1.0 / 120.0;  //CalculateDeltaTime(timecode, prev_timecode); // TODO
+    // std::cout << delta_time << std::endl;
 
     auto [assignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
     // std::cout << "Total cost: " << totalCost << std::endl;
@@ -275,8 +299,9 @@ void Communicator::get_frame() {
   }
 
   Communicator::previous_markers = current_markers;
-  Communicator::previous_timecode = timecode;
+  // Communicator::previous_timecode = timecode;
   is_first_frame = false; // set to false after first frame
+  
 
   // send position to publisher
   map<string, Publisher>::iterator pub_it;

@@ -265,7 +265,7 @@ void Communicator::get_frame() {
   // std::size_t marker_count = findMajorityElement(marker_count_total);
   Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
   if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
-    std::cout << "Error: " << unlabeled_marker_count.Result << '\n';
+    std::cout << "Warning: Unlabeled Markers not found" << unlabeled_marker_count.Result << '\n';
     std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
     return;
   }
@@ -273,12 +273,12 @@ void Communicator::get_frame() {
   std::cout << "marker count: " << marker_count << std::endl;
 
   MarkersStruct current_markers(marker_count, frame_number.FrameNumber);
+  Output_GetUnlabeledMarkerGlobalTranslation unlabeled_marker_translation;
   for (std::size_t i = 0; i < marker_count; i++) {
-    auto translation =
-        vicon_client.GetUnlabeledMarkerGlobalTranslation(i).Translation;
-    current_markers.x[i] = translation[0];
-    current_markers.y[i] = translation[1];
-    current_markers.z[i] = translation[2];
+    unlabeled_marker_translation = vicon_client.GetUnlabeledMarkerGlobalTranslation(i);
+    current_markers.x[i] = unlabeled_marker_translation.translation[0];
+    current_markers.y[i] = unlabeled_marker_translation.translation[1];
+    current_markers.z[i] = unlabeled_marker_translation.translation[2];
     current_markers.indices[i] = i;
   }
 
@@ -287,7 +287,6 @@ void Communicator::get_frame() {
 
   if (!is_first_frame){
     double delta_time = 1.0 / 120.0;  //CalculateDeltaTime(timecode, prev_timecode); // TODO
-    // std::cout << delta_time << std::endl;
 
     auto [assignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
     // std::cout << "Total cost: " << totalCost << std::endl;

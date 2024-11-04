@@ -31,9 +31,9 @@ private:
   string ns_name;
   map<string, Publisher> pub_map;
   boost::mutex mutex;
-  
+
   MarkersStruct previous_markers;
-  ViconDataStreamSDK::CPP::Output_GetTimecode previous_timecode;
+  double previous_frame_time = 0.0;
 
 public:
 
@@ -55,16 +55,14 @@ public:
                                const string segment_name);
 
   int findMajorityElement(std::vector<std::size_t>& nums);
-  double CalculateDeltaTime(const ViconDataStreamSDK::CPP::Output_GetTimecode& current, const ViconDataStreamSDK::CPP::Output_GetTimecode& previous);
+  double frame_delta_time(double current_frame_time);
   double calculateDistance(const std::vector<double>& a, const std::vector<double>& b);
   std::vector<int> hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix);
   std::pair<std::vector<std::pair<int, int>>, double> findOptimalAssignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker); 
 
-  // TODO
   MarkersStruct getPreviousMarkers();
-  ViconDataStreamSDK::CPP::Output_GetTimecode getPreviousTimecode();
 };
 
 } // namespace UnlabeledMarker

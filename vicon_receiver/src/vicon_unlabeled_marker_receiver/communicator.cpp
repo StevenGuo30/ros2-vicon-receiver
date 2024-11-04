@@ -107,24 +107,10 @@ int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
 }
 
 // Calculate the time difference between two timecodes
-double Communicator::CalculateDeltaTime(const Output_GetTimecode& current, const Output_GetTimecode& previous) {
-    // Convert current timecode to total seconds
-    double currentTimeInSeconds = current.Hours * 3600.0 +
-                                  current.Minutes * 60.0 +
-                                  current.Seconds +
-                                  current.Frames / static_cast<double>(current.SubFramesPerFrame) +
-                                  current.SubFrame / static_cast<double>(current.SubFramesPerFrame * current.SubFramesPerFrame);
-
-    // Convert previous timecode to total seconds
-    double previousTimeInSeconds = previous.Hours * 3600.0 +
-                                   previous.Minutes * 60.0 +
-                                   previous.Seconds +
-                                   previous.Frames / static_cast<double>(previous.SubFramesPerFrame) +
-                                   previous.SubFrame / static_cast<double>(previous.SubFramesPerFrame * previous.SubFramesPerFrame);
-
-    // Calculate delta time
-    return currentTimeInSeconds - previousTimeInSeconds;
-
+double Communicator::frame_delta_time(double current_frame_time){
+    double delta_time = 0.00f;
+    delta_time = current_frame_time - Communicator::previous_frame_time;
+    return delta_time;
 }
 
 double Communicator::calculateDistance(const std::vector<double>& a, const std::vector<double>& b) {
@@ -235,16 +221,6 @@ MarkersStruct Communicator::getPreviousMarkers(){
   }
 }
 
-ViconDataStreamSDK::CPP::Output_GetTimecode Communicator::getPreviousTimecode(){
-  if(is_first_frame){
-    Output_GetTimecode prev_timecode;
-    return Communicator::previous_timecode;
-  }
-  else{
-    return Communicator::previous_timecode;
-  }
-}
-
 void Communicator::get_frame() {
   if (!vicon_client.IsConnected().Connected) {
     cout << "Not connected to server" << endl;
@@ -256,10 +232,9 @@ void Communicator::get_frame() {
   vicon_client.GetFrame();
   Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
   std::cout << frame_number.Result << ' ' <<  frame_number.FrameNumber << std::endl;
-  Output_GetTimecode timecode = vicon_client.GetTimecode();
-  std::cout << timecode.Hours << ":" << timecode.Minutes << ":" << timecode.Seconds << ":" << timecode.Frames << std::endl;
-
-  // std::cout << frame_number.FrameNumber << std::endl;
+  const auto now = std::chrono::system_clock::now();
+  double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
+  std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
 
   // marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
   // std::size_t marker_count = findMajorityElement(marker_count_total);
@@ -276,17 +251,23 @@ void Communicator::get_frame() {
   Output_GetUnlabeledMarkerGlobalTranslation unlabeled_marker_translation;
   for (std::size_t i = 0; i < marker_count; i++) {
     unlabeled_marker_translation = vicon_client.GetUnlabeledMarkerGlobalTranslation(i);
-    current_markers.x[i] = unlabeled_marker_translation.translation[0];
-    current_markers.y[i] = unlabeled_marker_translation.translation[1];
-    current_markers.z[i] = unlabeled_marker_translation.translation[2];
+    current_markers.x[i] = unlabeled_marker_translation.Translation[0];
+    current_markers.y[i] = unlabeled_marker_translation.Translation[1];
+    current_markers.z[i] = unlabeled_marker_translation.Translation[2];
     current_markers.indices[i] = i;
   }
 
   MarkersStruct prev_markers = Communicator::getPreviousMarkers();
-  // Output_GetTimecode prev_timecode = Communicator::getPreviousTimecode();
+
+
 
   if (!is_first_frame){
-    double delta_time = 1.0 / 120.0;  //CalculateDeltaTime(timecode, prev_timecode); // TODO
+    double delta_time = Communicator::frame_delta_time(current_frame_time) / 1000.0; // convert to seconds
+    if (delta_time == 0.0){
+      std::cout << "Warning: Delta time is zero" << std::endl;
+      return;
+    }
+    std::cout << "Delta time: " << delta_time << " ms" << std::endl;
 
     auto [assignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
     // std::cout << "Total cost: " << totalCost << std::endl;
@@ -298,7 +279,7 @@ void Communicator::get_frame() {
   }
 
   Communicator::previous_markers = current_markers;
-  // Communicator::previous_timecode = timecode;
+  Communicator::previous_frame_time = current_frame_time;
   is_first_frame = false; // set to false after first frame
   
 

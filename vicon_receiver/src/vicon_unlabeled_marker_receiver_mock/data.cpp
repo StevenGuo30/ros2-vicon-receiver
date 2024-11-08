@@ -1,14 +1,16 @@
 #include "vicon_unlabeled_marker_receiver_mock/data.hpp"
 #include "vicon_unlabeled_marker_receiver_mock/publisher.hpp"
 
+using namespace UnlabeledMarker_Mock;
+
 DataImport::DataImport() {}
 
 void DataImport::fetch_data(unsigned int frame_number,
                             unsigned int segment_index,
-                            MarkersStruct &current_position) {
-  current_position.translation[0] = positions[frame_number][segment_index][0];
-  current_position.translation[1] = positions[frame_number][segment_index][1];
-  current_position.translation[2] = positions[frame_number][segment_index][2];
+                            PositionStruct &current_position) {
+  current_position.Translation[0] = positions[frame_number][segment_index][0];
+  current_position.Translation[1] = positions[frame_number][segment_index][1];
+  current_position.Translation[2] = positions[frame_number][segment_index][2];
 }
 
 void DataImport::load() {
@@ -37,7 +39,7 @@ void DataImport::load() {
   for(unsigned int k = 0; k < 6; k++){ 
     for (unsigned int i = 0; i < 6; i++) {
       for (unsigned int j = 0; j < 3; j++) {
-        positions[0][i][j] = temp_positions[k][i][j];
+        positions[k][i][j] = temp_pos[k][i][j];
       }
   }}
 

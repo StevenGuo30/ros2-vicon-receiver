@@ -1,7 +1,13 @@
 #pragma once
-#include "publisher.hpp"
+#include "vicon_unlabeled_marker_receiver/publisher.hpp"
+#include "vicon_unlabeled_marker_receiver/communicator.hpp"
+#include "vicon_unlabeled_marker_receiver_mock/data.hpp"
+#include "vicon_unlabeled_marker_receiver_mock/publisher.hpp"
 #include <array>
 
+using namespace ViconReceiver::UnlabeledMarker;
+
+namespace UnlabeledMarker_Mock {
 class DataImport {
 private:
   std::array<std::array<std::array<float, 3>, 6>, 1> positions;
@@ -11,5 +17,6 @@ public:
 
   void load();
 
-  void fetch_data(unsigned int, unsigned int, MarkersStruct &);
+  void fetch_data(unsigned int, unsigned int, PositionStruct&);
 };
+} // namespace UnlabeledMarker_Mock

@@ -1,8 +1,7 @@
 #pragma once
 #include "vicon_unlabeled_marker_receiver/publisher.hpp"
 #include "vicon_unlabeled_marker_receiver/communicator.hpp"
-#include "vicon_unlabeled_marker_receiver_mock/data.hpp"
-#include "vicon_unlabeled_marker_receiver_mock/publisher.hpp"
+#include "publisher_mock.hpp"
 #include <array>
 
 using namespace ViconReceiver::UnlabeledMarker;

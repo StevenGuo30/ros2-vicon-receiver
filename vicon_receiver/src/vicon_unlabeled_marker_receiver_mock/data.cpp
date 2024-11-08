@@ -6,7 +6,7 @@ DataImport::DataImport() {}
 
 void DataImport::fetch_data(unsigned int frame_number,
                             unsigned int segment_index,
-                            PositionStruct &current_position) {
+                            PositionStruct_mock &current_position) {
   current_position.Translation[0] = positions[frame_number][segment_index][0];
   current_position.Translation[1] = positions[frame_number][segment_index][1];
   current_position.Translation[2] = positions[frame_number][segment_index][2];
@@ -41,5 +41,4 @@ void DataImport::load() {
         positions[k][i][j] = temp_pos[k][i][j];
       }
   }}
-
 }

@@ -1,4 +1,4 @@
-#if !defined(PUBLISHER__MOCK_HPP)
+#if !defined(PUBLISHER_MOCK_HPP)
 #define PUBLISHER_MOCK_HPP
 #include "rclcpp/rclcpp.hpp"
 #include "vicon_receiver/msg/posture.hpp"
@@ -8,14 +8,14 @@
 
 namespace UnlabeledMarker_Mock {
 // Struct used to hold segment data to transmit to the Publisher class.
-struct PositionStruct {
+struct PositionStruct_mock {
   double Translation[3];
   std::string subject_name;
   std::string segment_name;
   std::string translation_type;
   unsigned int frame_number;
 
-} typedef PositionStruct;
+} typedef PositionStruct_mock;
 
 } // namespace UnlabeledMarker_Mock
 

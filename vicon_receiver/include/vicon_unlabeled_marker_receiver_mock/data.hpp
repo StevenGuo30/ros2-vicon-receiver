@@ -16,6 +16,6 @@ public:
 
   void load();
 
-  void fetch_data(unsigned int, unsigned int, PositionStruct&);
+  void fetch_data(unsigned int, unsigned int, PositionStruct_mock&);
 };
 } // namespace UnlabeledMarker_Mock

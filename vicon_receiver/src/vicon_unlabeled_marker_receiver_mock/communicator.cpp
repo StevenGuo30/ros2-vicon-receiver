@@ -1,5 +1,4 @@
-#include "vicon_unlabeled_marker_receiver/communicator.hpp"
-#include "vicon_unlabeled_marker_receiver_mock/data.hpp"
+#include "vicon_unlabeled_marker_receiver_mock/communicator_mock.hpp"
 
 using namespace ViconDataStreamSDK::CPP;
 using namespace UnlabeledMarker_Mock;
@@ -10,12 +9,10 @@ namespace UnlabeledMarker {
 bool is_first_frame = true;
 std::vector<std::size_t> marker_count_total;
 
-Communicator::Communicator() : Node("vicon_unlabeled_markers") {
+Communicator::Communicator() : Node("vicon") {
   // get parameters
-  this->declare_parameter<std::string>("hostname", "127.0.0.1");
   this->declare_parameter<int>("buffer_size", 200);
-  this->declare_parameter<std::string>("namespace", "vicon_unlabeled_markers");
-  this->get_parameter("hostname", hostname);
+  this->declare_parameter<std::string>("namespace", "vicon_mock");
   this->get_parameter("buffer_size", buffer_size);
   this->get_parameter("namespace", ns_name);
 }
@@ -28,7 +25,6 @@ bool Communicator::connect() {
   cout << msg << endl;
 
   data.load();
-  frame_number = 0UL;
 
   msg = "Initialization complete";
   cout << msg << endl;
@@ -37,22 +33,12 @@ bool Communicator::connect() {
 }
 
 bool Communicator::disconnect() {
-  if (!vicon_client.IsConnected().Connected)
-    return true;
   sleep(1);
-  vicon_client.DisableSegmentData();
-  vicon_client.DisableMarkerData();
-  vicon_client.DisableUnlabeledMarkerData();
-  vicon_client.DisableDeviceData();
-  vicon_client.DisableCentroidData();
-  string msg = "Disconnecting from " + hostname + "...";
+  string msg = "Disconnecting from vicon-mock";
   cout << msg << endl;
-  vicon_client.Disconnect();
   msg = "Successfully disconnected";
   cout << msg << endl;
-  if (!vicon_client.IsConnected().Connected)
-    return true;
-  return false;
+  return true;
 }
 
 int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
@@ -206,35 +192,24 @@ MarkersStruct Communicator::getPreviousMarkers(){
 }
 
 void Communicator::get_frame() {
-  if (!vicon_client.IsConnected().Connected) {
-    cout << "Not connected to server" << endl;
-    // wait 1 sec to try next
-    sleep(1);
-    return;
-  }
-
-  vicon_client.GetFrame();
-  Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
-  std::cout << frame_number.Result << ' ' <<  frame_number.FrameNumber << std::endl;
   const auto now = std::chrono::system_clock::now();
   double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
   std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
 
-  // marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
-  // std::size_t marker_count = findMajorityElement(marker_count_total);
-  Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
-  if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
-    std::cout << "Warning: Unlabeled Markers not found" << unlabeled_marker_count.Result << '\n';
-    std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
-    return;
-  }
-  std::size_t marker_count = unlabeled_marker_count.MarkerCount;
-  std::cout << "marker count: " << marker_count << std::endl;
+  // Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
+  // if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
+  //   std::cout << "Warning: Unlabeled Markers not found" << unlabeled_marker_count.Result << '\n';
+  //   std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
+  //   return;
+  // }
 
-  MarkersStruct current_markers(marker_count, frame_number.FrameNumber);
-  Output_GetUnlabeledMarkerGlobalTranslation unlabeled_marker_translation;
+  std::size_t marker_count = 6; //data.positions[1].size(),we have 6 unlabeled markers;
+  // std::cout << "marker count: " << marker_count << std::endl;
+
+  MarkersStruct current_markers(marker_count, frame_number);
+  PositionStruct_mock unlabeled_marker_translation;
   for (std::size_t i = 0; i < marker_count; i++) {
-    unlabeled_marker_translation = vicon_client.GetUnlabeledMarkerGlobalTranslation(i);
+    data.fetch_data(frame_number_mock, i, unlabeled_marker_translation);
     current_markers.x[i] = unlabeled_marker_translation.Translation[0];
     current_markers.y[i] = unlabeled_marker_translation.Translation[1];
     current_markers.z[i] = unlabeled_marker_translation.Translation[2];
@@ -243,7 +218,13 @@ void Communicator::get_frame() {
 
   MarkersStruct prev_markers = Communicator::getPreviousMarkers();
 
-
+  if(frame_number_mock < 6){
+    frame_number_mock++;
+  }
+  else{
+    frame_number_mock = 0;
+  }
+  frame_number++;//increment frame number
 
   if (!is_first_frame){
     double delta_time = Communicator::frame_delta_time(current_frame_time) / 1000.0; // convert to seconds

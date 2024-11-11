@@ -26,6 +26,11 @@ bool Communicator::connect() {
 
   data.load();
 
+  if(is_first_frame){
+    frame_number = 0;
+    frame_number_mock = 0;
+  }
+
   msg = "Initialization complete";
   cout << msg << endl;
 
@@ -204,9 +209,10 @@ void Communicator::get_frame() {
   // }
 
   std::size_t marker_count = 6; //data.positions[1].size(),we have 6 unlabeled markers;
-  // std::cout << "marker count: " << marker_count << std::endl;
 
   MarkersStruct current_markers(marker_count, frame_number);
+  std::cout << "current_markers: " << current_markers.frame_number << std::endl;
+  std::cout << "frame_number_mock: " << frame_number_mock << std::endl;
   PositionStruct_mock unlabeled_marker_translation;
   for (std::size_t i = 0; i < marker_count; i++) {
     data.fetch_data(frame_number_mock, i, unlabeled_marker_translation);

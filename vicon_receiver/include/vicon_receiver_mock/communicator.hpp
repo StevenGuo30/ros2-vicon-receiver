@@ -1,5 +1,4 @@
-#if !defined(COMMUNICATOR_HPP)
-#define COMMUNICATOR_HPP
+#pragma once
 
 #include "data.hpp"
 #include "publisher.hpp"
@@ -43,4 +42,4 @@ public:
                                const string segment_name);
 };
 
-#endif // COMMUNICATOR_HPP
+

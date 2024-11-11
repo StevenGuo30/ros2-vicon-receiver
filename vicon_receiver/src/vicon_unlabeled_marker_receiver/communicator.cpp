@@ -120,7 +120,6 @@ double Communicator::calculateDistance(const std::vector<double>& a, const std::
 std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix) {
     std::size_t n = costMatrix.size();
     std::size_t m = costMatrix[0].size();
-    std::cout << "  HA " << n << " " << m << std::endl;
     std::vector<int> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
     std::vector<int> minv(m + 1, std::numeric_limits<int>::max());
     std::vector<bool> used(m + 1, false);
@@ -234,7 +233,7 @@ void Communicator::get_frame() {
   std::cout << frame_number.Result << ' ' <<  frame_number.FrameNumber << std::endl;
   const auto now = std::chrono::system_clock::now();
   double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
-  std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
+  // std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
 
   // marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
   // std::size_t marker_count = findMajorityElement(marker_count_total);

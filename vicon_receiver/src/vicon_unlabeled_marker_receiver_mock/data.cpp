@@ -10,6 +10,15 @@ void DataImport::fetch_data(unsigned int frame_number,
   current_position.Translation[0] = positions[frame_number][segment_index][0];
   current_position.Translation[1] = positions[frame_number][segment_index][1];
   current_position.Translation[2] = positions[frame_number][segment_index][2];
+
+  // delay for 1.023 ms for each frame except the 4th frame
+  if(frame_number != 4){ // 4th frame is delayed
+      std::this_thread::sleep_for(std::chrono::milliseconds(1023));
+  }
+  else{
+      std::this_thread::sleep_for(std::chrono::seconds(2));
+  }
+
 }
 
 void DataImport::load() {
@@ -41,4 +50,5 @@ void DataImport::load() {
         positions[k][i][j] = temp_pos[k][i][j];
       }
   }}
+  std::cout << "Data loaded" << std::endl;
 }

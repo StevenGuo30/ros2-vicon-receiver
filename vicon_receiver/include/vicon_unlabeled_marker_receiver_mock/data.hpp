@@ -3,6 +3,7 @@
 #include "vicon_unlabeled_marker_receiver/communicator.hpp"
 #include "publisher_mock.hpp"
 #include <array>
+#include <thread>
 
 using namespace ViconReceiver::UnlabeledMarker;
 

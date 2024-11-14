@@ -120,6 +120,7 @@ double Communicator::calculateDistance(const std::vector<double>& a, const std::
 std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix) {
     std::size_t n = costMatrix.size();
     std::size_t m = costMatrix[0].size();
+    std::cout<<"HA " << n << " " << m << std::endl;
     std::vector<int> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
     std::vector<int> minv(m + 1, std::numeric_limits<int>::max());
     std::vector<bool> used(m + 1, false);
@@ -230,20 +231,32 @@ void Communicator::get_frame() {
 
   vicon_client.GetFrame();
   Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
-  std::cout << frame_number.Result << ' ' <<  frame_number.FrameNumber << std::endl;
+  std::cout << "If success get frame,return 2:"<<frame_number.Result << ' framenumber:' <<  frame_number.FrameNumber << std::endl;
   const auto now = std::chrono::system_clock::now();
   double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
   // std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
 
-  // marker_count_total.push_back(vicon_client.GetUnlabeledMarkerCount().MarkerCount); // store marker count for majority element calculation
-  // std::size_t marker_count = findMajorityElement(marker_count_total);
-  Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
-  if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
-    std::cout << "Warning: Unlabeled Markers not found" << unlabeled_marker_count.Result << '\n';
-    std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
+  std::size_t marker_count_now = vicon_client.GetUnlabeledMarkerCount().MarkerCount; //data.positions[1].size(),we have 6 unlabeled markers;
+  marker_count_total.push_back(marker_count_now); // store marker count for majority element calculation
+  std::size_t marker_count = findMajorityElement(marker_count_total);
+  // Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
+  // std::size_t marker_count = unlabeled_marker_count.MarkerCount;
+  // if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
+  //   std::cout << "Warning: Unlabeled Markers not found" << unlabeled_marker_count.Result << '\n';
+  //   std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
+  //   return;
+  // }
+  if (marker_count == 0){
+    std::cout << "Warning: Unlabeled Markers not found" << '\n';
+    std::cout << "  " << marker_count_now << std::endl;
     return;
   }
-  std::size_t marker_count = unlabeled_marker_count.MarkerCount;
+  else if(marker_count_now != marker_count){
+    std::cout << "Warning: flickering" << '\n';
+    std::cout << "  " << marker_count_now << std::endl;
+    return;
+  }
+
   std::cout << "marker count: " << marker_count << std::endl;
 
   MarkersStruct current_markers(marker_count, frame_number.FrameNumber);

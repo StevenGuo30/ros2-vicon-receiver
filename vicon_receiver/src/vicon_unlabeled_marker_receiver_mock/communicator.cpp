@@ -78,6 +78,7 @@ int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
     return nums.back();
   }
 
+  std::cout << "Majority element: " << majority << std::endl;
   return majority;
 }
 
@@ -207,8 +208,16 @@ void Communicator::get_frame() {
   //   std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
   //   return;
   // }
-  std::size_t marker_count = data.get_marker_count(frame_number_mock); //data.positions[1].size(),we have 6 unlabeled markers;
+  std::size_t marker_count_now = data.get_marker_count(frame_number_mock); //data.positions[1].size(),we have 6 unlabeled markers;
+  marker_count_total.push_back(marker_count_now); // store marker count for majority element calculation
+  std::size_t marker_count = findMajorityElement(marker_count_total);
   std::cout << "marker_count: " << marker_count << std::endl;
+
+  if(marker_count_now != marker_count){
+    std::cout << "Warning: flickering" << '\n';
+    frame_number_mock=0;
+    return;
+  }
   
   MarkersStruct current_markers(marker_count, frame_number);
   std::cout << "frame_number: " << current_markers.frame_number << std::endl;
@@ -250,8 +259,6 @@ void Communicator::get_frame() {
     }
   }
 
-  // MarkersStruct prev_markers_init(0, 0);
-  // Communicator::previous_markers = prev_markers_init;//initialize previous markers every time
   Communicator::previous_markers = current_markers;
   std::cout << "Previous markers count:" << Communicator::previous_markers.indices.back() << std::endl;
   Communicator::previous_frame_time = current_frame_time;

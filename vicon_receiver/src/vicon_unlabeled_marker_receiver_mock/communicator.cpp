@@ -199,7 +199,7 @@ MarkersStruct Communicator::getPreviousMarkers(){
 void Communicator::get_frame() {
   const auto now = std::chrono::system_clock::now();
   double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
-  std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
+  // std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
 
   // Output_GetUnlabeledMarkerCount unlabeled_marker_count = vicon_client.GetUnlabeledMarkerCount();
   // if (unlabeled_marker_count.Result != Result::Success or unlabeled_marker_count.MarkerCount == 0){
@@ -207,11 +207,11 @@ void Communicator::get_frame() {
   //   std::cout << "  " << unlabeled_marker_count.MarkerCount << std::endl;
   //   return;
   // }
-
-  std::size_t marker_count = 6; //data.positions[1].size(),we have 6 unlabeled markers;
-
+  std::size_t marker_count = data.get_marker_count(frame_number_mock); //data.positions[1].size(),we have 6 unlabeled markers;
+  std::cout << "marker_count: " << marker_count << std::endl;
+  
   MarkersStruct current_markers(marker_count, frame_number);
-  std::cout << "current_markers: " << current_markers.frame_number << std::endl;
+  std::cout << "frame_number: " << current_markers.frame_number << std::endl;
   std::cout << "frame_number_mock: " << frame_number_mock << std::endl;
   PositionStruct_mock unlabeled_marker_translation;
   for (std::size_t i = 0; i < marker_count; i++) {
@@ -224,7 +224,7 @@ void Communicator::get_frame() {
 
   MarkersStruct prev_markers = Communicator::getPreviousMarkers();
 
-  if(frame_number_mock < 6){
+  if(frame_number_mock < 7){
     frame_number_mock++;
   }
   else{
@@ -241,7 +241,8 @@ void Communicator::get_frame() {
     std::cout << "Delta time: " << delta_time << " ms" << std::endl;
 
     auto [assignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
-    // std::cout << "Total cost: " << totalCost << std::endl;
+    std::cout << "Not freeze here" << std::endl;
+    std::cout << "Total cost: " << totalCost << std::endl;
     for (const auto& [current_idx, prev_idx] : assignment) {
       current_markers.vx[current_idx] = (current_markers.x[current_idx] - prev_markers.x[prev_idx])/delta_time;
       current_markers.vy[current_idx] = (current_markers.y[current_idx] - prev_markers.y[prev_idx])/delta_time;
@@ -249,7 +250,10 @@ void Communicator::get_frame() {
     }
   }
 
+  // MarkersStruct prev_markers_init(0, 0);
+  // Communicator::previous_markers = prev_markers_init;//initialize previous markers every time
   Communicator::previous_markers = current_markers;
+  std::cout << "Previous markers count:" << Communicator::previous_markers.indices.back() << std::endl;
   Communicator::previous_frame_time = current_frame_time;
   is_first_frame = false; // set to false after first frame
   

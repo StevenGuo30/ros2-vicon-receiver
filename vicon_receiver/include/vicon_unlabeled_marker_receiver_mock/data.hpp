@@ -10,7 +10,7 @@ using namespace ViconReceiver::UnlabeledMarker;
 namespace UnlabeledMarker_Mock {
 class DataImport {
 private:
-  std::array<std::array<std::array<float, 3>, 6>, 1> positions;
+  std::vector<std::vector<std::vector<float>>> positions;
 
 public:
   DataImport();
@@ -18,5 +18,7 @@ public:
   void load();
 
   void fetch_data(unsigned int, unsigned int, PositionStruct_mock&);
+
+  unsigned int get_marker_count(unsigned int);
 };
 } // namespace UnlabeledMarker_Mock

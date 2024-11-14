@@ -269,7 +269,7 @@ void Communicator::get_frame() {
     std::cout << "Delta time: " << delta_time << " ms" << std::endl;
 
     auto [assignment, totalCost] = findOptimalAssignment(current_markers, prev_markers);
-    // std::cout << "Total cost: " << totalCost << std::endl;
+    std::cout << "Total cost: " << totalCost << std::endl;
     for (const auto& [current_idx, prev_idx] : assignment) {
       current_markers.vx[current_idx] = (current_markers.x[current_idx] - prev_markers.x[prev_idx])/delta_time;
       current_markers.vy[current_idx] = (current_markers.y[current_idx] - prev_markers.y[prev_idx])/delta_time;

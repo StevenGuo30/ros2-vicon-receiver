@@ -1,5 +1,8 @@
 #include "vicon_unlabeled_marker_receiver/communicator.hpp"
 
+#include "utility/math/linalg.hpp"
+#include "utility/algorithm/hungarian_algorithm.hpp"
+
 using namespace ViconDataStreamSDK::CPP;
 
 namespace ViconReceiver {
@@ -91,7 +94,7 @@ bool Communicator::disconnect() {
 
 template <typename T>
 std::size_t Communicator::find_majority_element(const std::deque<T>& nums) {
-  std::size_t majority = nums.front();
+  T majority = nums.front();
   std::size_t count = 1;
 
   for (std::size_t i = 1; i < nums.size(); ++i) {
@@ -121,85 +124,13 @@ std::size_t Communicator::find_majority_element(const std::deque<T>& nums) {
   return majority;
 }
 
-// Calculate the time difference between two timecodes
-inline double Communicator::frame_delta_time(double& current_frame_time){
-    return current_frame_time - Communicator::previous_frame_time;
-}
-
-inline double Communicator::calculate_distance(const std::vector<double>& a, const std::vector<double>& b) {
-    return sqrt(pow(a[0] - b[0], 2) + pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2));
-}
-
-std::vector<std::size_t> Communicator::hungarian_algorithm(const std::vector<std::vector<double>>& costMatrix) {
-    std::size_t n = costMatrix.size();
-    std::size_t m = costMatrix[0].size();
-    std::cout<<"HA " << n << " " << m << std::endl;
-
-    std::vector<std::size_t> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
-    std::vector<std::size_t> minv(m + 1, std::numeric_limits<std::size_t>::max());
-    std::vector<bool> used(m + 1, false);
-
-    std::size_t i0;
-    std::size_t j0, j1;
-    std::size_t delta, cur;
-    for (std::size_t i = 1; i <= n; ++i) {
-        // initialize minv and used
-        std::fill(minv.begin(), minv.end(), std::numeric_limits<std::size_t>::max());
-        std::fill(used.begin(), used.end(), false);
-
-        j0 = 0;
-        p[0] = i;
-        do {
-            used[j0] = true;
-            i0 = p[j0];
-
-            delta = std::numeric_limits<std::size_t>::max();
-            for (std::size_t j = 1; j <= m; ++j) {
-                if (!used[j]) {
-                    cur = costMatrix[i0 - 1][j - 1] - u[i0] - v[j];
-                    if (cur < minv[j]) {
-                        minv[j] = cur;
-                        way[j] = j0;
-                    }
-                    if (minv[j] < delta) {
-                        delta = minv[j];
-                        j1 = j;
-                    }
-                }
-            }
-            for (std::size_t j = 0; j <= m; ++j) {
-                if (used[j]) {
-                    u[p[j]] += delta;
-                    v[j] -= delta;
-                } else {
-                    minv[j] -= delta;
-                }
-            }
-            j0 = j1;
-        } while (p[j0] != 0);
-
-        do {
-            j1 = way[j0];
-            p[j0] = p[j1];
-            j0 = j1;
-        } while (j0);
-    }
-    std::vector<std::size_t> result(n);
-    for (std::size_t j = 1; j <= m; ++j) {
-        if (p[j] != 0) {
-            result[p[j] - 1] = j - 1;
-        }
-    }
-    return result;
-}
-
-std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator::findOptimalAssignment(
+std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator::find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker) {
 
     std::size_t n = current_marker.indices.size();
     std::size_t m = prev_marker.indices.size();
-    std::vector<std::vector<double>> costMatrix(n, std::vector<double>(m));
+    std::vector<std::vector<double>> cost_matrix(n, std::vector<double>(m));
     std::vector<double> current_marker_pos(3), prev_marker_pos(3);
 
     // Calculate the cost matrix
@@ -207,22 +138,22 @@ std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator
         current_marker_pos = {current_marker.x[i], current_marker.y[i], current_marker.z[i]};
         for (std::size_t j = 0; j < m; ++j) {
             prev_marker_pos = {prev_marker.x[j], prev_marker.y[j], prev_marker.z[j]};
-            costMatrix[i][j] = calculate_distance(current_marker_pos, prev_marker_pos);
+            cost_matrix[i][j] = Utility::Math::calculate_distance(current_marker_pos, prev_marker_pos);
         }
     }
 
     // // Apply Hungarian Algorithm to find the optimal assignment
-    std::vector<std::size_t> assignment = hungarian_algorithm(costMatrix);
+    std::vector<std::size_t> assignment = Utility::Algorithm::hungarian_algorithm<double>(cost_matrix);
 
     // Create the result as pairs of (current_marker index, prev_marker index)
     std::vector<std::pair<std::size_t, std::size_t>> result;
-    double totalCost = 0;
+    double total_cost = 0;
     for (std::size_t i = 0; i < n; ++i) {
         result.emplace_back(i, assignment[i]);
-        totalCost += costMatrix[i][assignment[i]]; // Sum the cost for each assignment
+        total_cost += cost_matrix[i][assignment[i]]; // Sum the cost for each assignment
     }
 
-    return std::make_pair(result, totalCost);
+    return std::make_pair(result, total_cost);
 }
 
 
@@ -280,10 +211,10 @@ void Communicator::get_frame() {
   double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
 
   // Compute Velocity
-  double delta_time = Communicator::frame_delta_time(current_frame_time) / 1000.0; // convert to seconds
+  double delta_time = (current_frame_time - Communicator::previous_frame_time) / 1000.0; // convert to seconds
   std::cout << "Delta time: " << delta_time << " ms" << std::endl;
 
-  auto [assignment, totalCost] = findOptimalAssignment(current_markers, Communicator::previous_markers);
+  auto [assignment, totalCost] = find_optimal_assignment(current_markers, Communicator::previous_markers);
   std::cout << "Total cost: " << totalCost << std::endl;
   for (const auto& [current_idx, prev_idx] : assignment) {
     current_markers.vx[current_idx] = (current_markers.x[current_idx] - Communicator::previous_markers.x[prev_idx])/delta_time;

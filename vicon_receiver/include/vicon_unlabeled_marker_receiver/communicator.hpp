@@ -15,7 +15,7 @@
 #include <limits>
 
 #include "vicon_unlabeled_marker_receiver/publisher.hpp"
-#include "utility/fixed_size_queue.hpp"
+#include "utility/data_structure/fixed_size_queue.hpp"
 
 namespace ViconReceiver {
 namespace UnlabeledMarker {
@@ -60,13 +60,7 @@ public:
   template <typename T>
   std::size_t find_majority_element(const std::deque<T>&);
 
-  inline double frame_delta_time(double& current_frame_time);
-
-  inline double calculate_distance(const std::vector<double>& a, const std::vector<double>& b);
-
-  std::vector<std::size_t> hungarian_algorithm(const std::vector<std::vector<double>>& costMatrix);
-
-  std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> findOptimalAssignment(
+  std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker);
 

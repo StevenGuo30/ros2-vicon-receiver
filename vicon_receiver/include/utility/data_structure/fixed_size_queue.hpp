@@ -39,7 +39,7 @@ public:
         std::deque<T>::emplace_back(std::move(value));
     }
 
-    std::size_t max_size() const {
+    constexpr std::size_t max_size() const {
         return MaxLen;
     }
 };

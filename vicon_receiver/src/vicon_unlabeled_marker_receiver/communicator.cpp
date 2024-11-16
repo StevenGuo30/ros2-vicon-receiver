@@ -144,7 +144,7 @@ void Communicator::get_frame() {
 
     // Get first frame information
     std::size_t frame_number;
-    for (std::size_t i = 0; i < 120; i++){
+    for (std::size_t i = 0; i < 120; i++){ // TODO: make 120 to be a parameter
       vicon_client.GetFrame();
       frame_number = vicon_client.GetFrameNumber().FrameNumber;
       marker_count = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
@@ -153,7 +153,7 @@ void Communicator::get_frame() {
     marker_count = find_majority_element(marker_count_total);
     if (marker_count == 0){
       std::cout << "Warning: Unlabeled Markers not found" << '\n';
-      return;
+      return; // Initialization failed
     }
 
     previous_markers = MarkersStruct(marker_count, frame_number);

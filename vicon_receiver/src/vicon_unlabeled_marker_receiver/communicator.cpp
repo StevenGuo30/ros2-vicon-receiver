@@ -1,7 +1,7 @@
 #include "vicon_unlabeled_marker_receiver/communicator.hpp"
 
 #include "utility/math/linalg.hpp"
-#include "utility/algorithm/hungarian_algorithm.hpp"
+#include "utility/algorithm.hpp"
 
 using namespace ViconDataStreamSDK::CPP;
 
@@ -95,38 +95,6 @@ bool Communicator::disconnect() {
   if (!vicon_client.IsConnected().Connected)
     return true;
   return false;
-}
-
-template <typename T>
-std::size_t Communicator::find_majority_element(const std::deque<T>& nums) {
-  T majority = nums.front();
-  std::size_t count = 1;
-
-  for (std::size_t i = 1; i < nums.size(); ++i) {
-    if (count == 0) {
-      majority = nums[i];
-      count = 1;
-    } else if (majority == nums[i]) {
-      count++;
-    } else {
-      count--;
-    }
-  }
-
-  // Verify if the found majority element is actually the majority
-  count = 0;
-  for (T num : nums) {
-    if (num == majority) {
-      count++;
-    }
-  }
-
-  // If no majority element found, return the most recently stored element
-  if (count <= nums.size() / 2) {
-    return nums.back();
-  }
-
-  return majority;
 }
 
 std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator::find_optimal_assignment(

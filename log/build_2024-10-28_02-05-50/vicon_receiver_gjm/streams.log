@@ -1,5 +1,0 @@
-[0.032s] Invoking command in '/vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm -- -j8 -l8
-[0.055s] CMake Error: The source directory "/vicon_GJM_test/ros2-vicon-receiver/vicon_receiver" does not exist.
-[0.055s] Specify --help for usage, or press the help button on the CMake GUI.
-[0.056s] make: *** [Makefile:1240: cmake_check_build_system] Error 1
-[0.058s] Invoked command in '/vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /vicon_GJM_test/ros2-vicon-receiver/build/vicon_receiver_gjm -- -j8 -l8

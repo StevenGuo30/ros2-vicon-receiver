@@ -53,13 +53,16 @@ bool Communicator::connect() {
   return true;
 }
 
-bool Communicator::fetch_markers(MarkersStruct& markers) {
+auto Communicator::fetch_markers(MarkersStruct& markers) -> double{
   vicon_client.GetFrame();
   std::size_t marker_count_now = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
-  if (marker_count_now != marker_count){
-      std::cout << "Warning: Marker count mismatch: " << marker_count_now << std::endl;
-    sleep(0.1);
-    return false;
+
+  while (marker_count_now != marker_count){ // wait until the marker count is stable
+    std::cout << "Warning: Marker count mismatch: " << marker_count_now << std::endl;
+    sleep(0.1); // TODO: Probably needs to be faster??
+
+    vicon_client.GetFrame();
+    marker_count_now = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
   }
 
   Output_GetUnlabeledMarkerGlobalTranslation unlabeled_marker_translation;
@@ -70,7 +73,9 @@ bool Communicator::fetch_markers(MarkersStruct& markers) {
     markers.z[i] = unlabeled_marker_translation.Translation[2];
     markers.indices[i] = i;
   }
-  return true;
+
+  auto now = std::chrono::system_clock::now();
+  return std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
 }
 
 bool Communicator::disconnect() {
@@ -131,7 +136,8 @@ std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator
     std::size_t n = current_marker.indices.size();
     std::size_t m = prev_marker.indices.size();
     std::vector<std::vector<double>> cost_matrix(n, std::vector<double>(m));
-    std::vector<double> current_marker_pos(3), prev_marker_pos(3);
+
+    std::array<double, 3> current_marker_pos, prev_marker_pos;
 
     // Calculate the cost matrix
     for (std::size_t i = 0; i < n; ++i) {
@@ -183,9 +189,7 @@ void Communicator::get_frame() {
     }
 
     previous_markers = MarkersStruct(marker_count, frame_number);
-    while (!Communicator::fetch_markers(previous_markers)){}
-    auto now = std::chrono::system_clock::now();
-    Communicator::previous_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
+    Communicator::previous_frame_time = Communicator::fetch_markers(previous_markers);
 
     std::cout << "Initial marker counts: " << marker_count << std::endl;
     flag_initialized = true;
@@ -193,7 +197,7 @@ void Communicator::get_frame() {
 
   vicon_client.GetFrame();
   Output_GetFrameNumber frame_number = vicon_client.GetFrameNumber();
-  std::cout << "If success get frame, return 2:"<<frame_number.Result << ' framenumber:' <<  frame_number.FrameNumber << std::endl;
+  std::cout << "If success get frame, return 2:"<<frame_number.Result << " framenumber:" <<  frame_number.FrameNumber << std::endl;
   // std::cout << "Current frame time: " << current_frame_time << " ms" << std::endl;
 
   // std::size_t marker_count_now = vicon_client.GetUnlabeledMarkerCount().MarkerCount; //data.positions[1].size(),we have 6 unlabeled markers;
@@ -206,9 +210,7 @@ void Communicator::get_frame() {
   // }
 
   MarkersStruct current_markers(marker_count, frame_number.FrameNumber);
-  while (!Communicator::fetch_markers(current_markers)){ }
-  auto now = std::chrono::system_clock::now();
-  double current_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
+  double current_frame_time = Communicator::fetch_markers(current_markers);
 
   // Compute Velocity
   double delta_time = (current_frame_time - Communicator::previous_frame_time) / 1000.0; // convert to seconds

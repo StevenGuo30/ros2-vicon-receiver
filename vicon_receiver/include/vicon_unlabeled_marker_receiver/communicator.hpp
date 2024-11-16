@@ -9,6 +9,7 @@
 #include <string>
 #include <unistd.h>
 #include <vector>
+#include <array>
 #include <deque>
 #include <cmath>
 #include <algorithm>
@@ -55,7 +56,7 @@ public:
   void create_publisher_thread(const std::string subject_name,
                                const std::string segment_name);
 
-  bool fetch_markers(MarkersStruct&);
+  auto fetch_markers(MarkersStruct&) -> double;
 
   template <typename T>
   std::size_t find_majority_element(const std::deque<T>&);

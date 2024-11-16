@@ -1,30 +1,42 @@
 #pragma once
 
-#include <queue>
 #include <deque>
 
-namespace ViconReceiver{
 namespace Utility{
 
-template <typename T, int MaxLen, typename Container=std::deque<T>>
-class FixedQueue : public std::queue<T, Container> {
+template <typename T, int MaxLen>
+class FixedQueue : public std::deque<T> {
 public:
 
     /*
      * Overload push function to pop the front element if the queue is full
      */
-    void push(const T& value) {
+    void push_back(const T& value) {
         if (this->size() >= MaxLen) {
             this->c.pop_front();
         }
-        std::queue<T, Container>::push(value);
+        std::deque<T>::push_back(value);
     }
 
-    void push(T&& value) {
+    void push_back(T&& value) {
         if (this->size() >= MaxLen) {
             this->c.pop_front();
         }
-        std::queue<T, Container>::push(std::move(value));
+        std::deque<T>::push(std::move(value));
+    }
+
+    void emplace_back(const T& value) {
+        if (this->size() >= MaxLen) {
+            this->pop_front();
+        }
+        std::deque<T>::emplace_back(value);
+    }
+
+    void emplace_back(T&& value) {
+        if (this->size() >= MaxLen) {
+            this->pop_front();
+        }
+        std::deque<T>::emplace_back(std::move(value));
     }
 
     std::size_t max_size() const {
@@ -33,4 +45,3 @@ public:
 };
 
 }   // namespace Utility
-}   // namespace ViconReceiver

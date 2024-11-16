@@ -12,7 +12,7 @@ std::vector<std::size_t> hungarian_algorithm(const Matrix& cost_matrix) {
     static_assert(std::is_arithmetic<T>::value, "T must be arithmetic");
     // TODO: add assertion for 2D container
 
-    constexpr T SIZEMAX = std::numeric_limits<std::size_t>::max();
+    constexpr auto SIZEMAX = std::numeric_limits<std::size_t>::max();
 
     const std::size_t n = cost_matrix.size();
     const std::size_t m = cost_matrix[0].size();

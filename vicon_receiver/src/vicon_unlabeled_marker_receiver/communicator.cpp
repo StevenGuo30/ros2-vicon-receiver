@@ -18,20 +18,20 @@ Communicator::Communicator() : Node("vicon_unlabeled_markers") {
 
 bool Communicator::connect() {
   // connect to server
-  string msg = "Connecting to " + hostname + " ...";
-  cout << msg << endl;
-  int counter = 0;
+  std::string msg = "Connecting to " + hostname + " ...";
+  std::cout << msg << std::endl;
+  std::size_t counter = 0;
   while (!vicon_client.IsConnected().Connected) {
     bool ok = (vicon_client.Connect(hostname).Result == Result::Success);
     if (!ok) {
       counter++;
       msg = "Connect failed, reconnecting (" + std::to_string(counter) + ")...";
-      cout << msg << endl;
+      std::cout << msg << std::endl;
       sleep(1);
     }
   }
   msg = "Connection successfully established with " + hostname;
-  cout << msg << endl;
+  std::cout << msg << std::endl;
 
   // perform further initialization
   // vicon_client.EnableSegmentData();
@@ -45,7 +45,7 @@ bool Communicator::connect() {
   vicon_client.SetBufferSize(buffer_size);
 
   msg = "Initialization complete";
-  cout << msg << endl;
+  std::cout << msg << std::endl;
 
   return true;
 }
@@ -54,7 +54,7 @@ bool Communicator::fetch_markers(MarkersStruct& markers) {
   vicon_client.GetFrame();
   std::size_t marker_count_now = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
   if (marker_count_now != marker_count){
-    cout << "Warning: Marker count mismatch: " << marker_count_now << endl;
+      std::cout << "Warning: Marker count mismatch: " << marker_count_now << std::endl;
     sleep(0.1);
     return false;
   }
@@ -79,25 +79,22 @@ bool Communicator::disconnect() {
   vicon_client.DisableUnlabeledMarkerData();
   vicon_client.DisableDeviceData();
   vicon_client.DisableCentroidData();
-  string msg = "Disconnecting from " + hostname + "...";
-  cout << msg << endl;
+  std::string msg = "Disconnecting from " + hostname + "...";
+  std::cout << msg << std::endl;
   vicon_client.Disconnect();
   msg = "Successfully disconnected";
-  cout << msg << endl;
+  std::cout << msg << std::endl;
   if (!vicon_client.IsConnected().Connected)
     return true;
   return false;
 }
 
-int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
-  // If the size of the array is greater than 120, keep only the last 120 elements
-  if (nums.size() > 120) {
-    nums.erase(nums.begin(), nums.end() - 120);
-  }
+template <typename T>
+std::size_t Communicator::find_majority_element(const std::deque<T>& nums) {
+  std::size_t majority = nums.front();
+  std::size_t count = 1;
 
-  int majority = nums[0];
-  int count = 1;
-  for (int i = 1; i < nums.size(); ++i) {
+  for (std::size_t i = 1; i < nums.size(); ++i) {
     if (count == 0) {
       majority = nums[i];
       count = 1;
@@ -110,7 +107,7 @@ int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
 
   // Verify if the found majority element is actually the majority
   count = 0;
-  for (int num : nums) {
+  for (T num : nums) {
     if (num == majority) {
       count++;
     }
@@ -129,25 +126,25 @@ inline double Communicator::frame_delta_time(double& current_frame_time){
     return current_frame_time - Communicator::previous_frame_time;
 }
 
-inline double Communicator::calculateDistance(const std::vector<double>& a, const std::vector<double>& b) {
+inline double Communicator::calculate_distance(const std::vector<double>& a, const std::vector<double>& b) {
     return sqrt(pow(a[0] - b[0], 2) + pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2));
 }
 
-std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix) {
+std::vector<std::size_t> Communicator::hungarian_algorithm(const std::vector<std::vector<double>>& costMatrix) {
     std::size_t n = costMatrix.size();
     std::size_t m = costMatrix[0].size();
     std::cout<<"HA " << n << " " << m << std::endl;
-    
-    std::vector<int> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
-    std::vector<int> minv(m + 1, std::numeric_limits<int>::max());
+
+    std::vector<std::size_t> u(n + 1), v(m + 1), p(m + 1), way(m + 1);
+    std::vector<std::size_t> minv(m + 1, std::numeric_limits<std::size_t>::max());
     std::vector<bool> used(m + 1, false);
 
-    int i0;
-    int j0, j1;
-    int delta, cur;
-    for (int i = 1; i <= n; ++i) {
+    std::size_t i0;
+    std::size_t j0, j1;
+    std::size_t delta, cur;
+    for (std::size_t i = 1; i <= n; ++i) {
         // initialize minv and used
-        std::fill(minv.begin(), minv.end(), std::numeric_limits<int>::max());
+        std::fill(minv.begin(), minv.end(), std::numeric_limits<std::size_t>::max());
         std::fill(used.begin(), used.end(), false);
 
         j0 = 0;
@@ -155,9 +152,9 @@ std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<
         do {
             used[j0] = true;
             i0 = p[j0];
-            
-            delta = std::numeric_limits<int>::max();
-            for (int j = 1; j <= m; ++j) {
+
+            delta = std::numeric_limits<std::size_t>::max();
+            for (std::size_t j = 1; j <= m; ++j) {
                 if (!used[j]) {
                     cur = costMatrix[i0 - 1][j - 1] - u[i0] - v[j];
                     if (cur < minv[j]) {
@@ -170,7 +167,7 @@ std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<
                     }
                 }
             }
-            for (int j = 0; j <= m; ++j) {
+            for (std::size_t j = 0; j <= m; ++j) {
                 if (used[j]) {
                     u[p[j]] += delta;
                     v[j] -= delta;
@@ -187,8 +184,8 @@ std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<
             j0 = j1;
         } while (j0);
     }
-    std::vector<int> result(n);
-    for (int j = 1; j <= m; ++j) {
+    std::vector<std::size_t> result(n);
+    for (std::size_t j = 1; j <= m; ++j) {
         if (p[j] != 0) {
             result[p[j] - 1] = j - 1;
         }
@@ -196,69 +193,70 @@ std::vector<int> Communicator::hungarianAlgorithm(const std::vector<std::vector<
     return result;
 }
 
-std::pair<std::vector<std::pair<int, int>>, double> Communicator::findOptimalAssignment(
+std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator::findOptimalAssignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker) {
-    
+
     std::size_t n = current_marker.indices.size();
     std::size_t m = prev_marker.indices.size();
     std::vector<std::vector<double>> costMatrix(n, std::vector<double>(m));
     std::vector<double> current_marker_pos(3), prev_marker_pos(3);
 
     // Calculate the cost matrix
-    for (int i = 0; i < n; ++i) {
+    for (std::size_t i = 0; i < n; ++i) {
         current_marker_pos = {current_marker.x[i], current_marker.y[i], current_marker.z[i]};
-        for (int j = 0; j < m; ++j) {    
+        for (std::size_t j = 0; j < m; ++j) {
             prev_marker_pos = {prev_marker.x[j], prev_marker.y[j], prev_marker.z[j]};
-            costMatrix[i][j] = calculateDistance(current_marker_pos, prev_marker_pos);
+            costMatrix[i][j] = calculate_distance(current_marker_pos, prev_marker_pos);
         }
     }
-    
+
     // // Apply Hungarian Algorithm to find the optimal assignment
-    std::vector<int> assignment = hungarianAlgorithm(costMatrix);
-    
+    std::vector<std::size_t> assignment = hungarian_algorithm(costMatrix);
+
     // Create the result as pairs of (current_marker index, prev_marker index)
-    std::vector<std::pair<int, int>> result;
+    std::vector<std::pair<std::size_t, std::size_t>> result;
     double totalCost = 0;
-    for (int i = 0; i < n; ++i) {
+    for (std::size_t i = 0; i < n; ++i) {
         result.emplace_back(i, assignment[i]);
         totalCost += costMatrix[i][assignment[i]]; // Sum the cost for each assignment
     }
-    
+
     return std::make_pair(result, totalCost);
 }
 
 
 void Communicator::get_frame() {
   if (!vicon_client.IsConnected().Connected) {
-    cout << "Not connected to server" << endl;
+      std::cout << "Not connected to server" << std::endl;
     // wait 1 sec to try next
     sleep(1);
     return;
   }
   if (!flag_initialized){
-    std::vector<std::size_t> marker_count_total;
+    // std::vector<std::size_t> marker_count_total;
+    Utility::FixedQueue<std::size_t, 120> marker_count_total;
 
     // Get first frame information
     std::size_t frame_number;
-    for (int i = 0; i < 120; i++){
+    for (std::size_t i = 0; i < 120; i++){
       vicon_client.GetFrame();
       frame_number = vicon_client.GetFrameNumber().FrameNumber;
       marker_count = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
       marker_count_total.emplace_back(marker_count);
     }
-    marker_count = findMajorityElement(marker_count_total);
+    marker_count = find_majority_element(marker_count_total);
     if (marker_count == 0){
       std::cout << "Warning: Unlabeled Markers not found" << '\n';
       return;
     }
-    
+
     previous_markers = MarkersStruct(marker_count, frame_number);
     while (!Communicator::fetch_markers(previous_markers)){}
     auto now = std::chrono::system_clock::now();
     Communicator::previous_frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
 
-    cout << "Initial marker counts: " << marker_count << endl;
+    std::cout << "Initial marker counts: " << marker_count << std::endl;
     flag_initialized = true;
   }
 
@@ -298,10 +296,10 @@ void Communicator::get_frame() {
   Communicator::previous_frame_time = current_frame_time;
 
   // send position to publisher
-  map<string, Publisher>::iterator pub_it;
+  std::map<std::string, Publisher>::iterator pub_it;
   boost::mutex::scoped_try_lock lock(mutex);
-  const string subject_name = "unlabeled_markers";
-  const string segment_name = "positions_velocity";
+  const std::string subject_name = "unlabeled_markers";
+  const std::string segment_name = "positions_velocity";
 
   if (lock.owns_lock()) {
     // get publisher
@@ -320,20 +318,20 @@ void Communicator::get_frame() {
   }
 }
 
-void Communicator::create_publisher(const string subject_name,
-                                    const string segment_name) {
+void Communicator::create_publisher(const std::string subject_name,
+                                    const std::string segment_name) {
   boost::thread(&Communicator::create_publisher_thread, this, subject_name,
                 segment_name);
 }
 
-void Communicator::create_publisher_thread(const string subject_name,
-                                           const string segment_name) {
+void Communicator::create_publisher_thread(const std::string subject_name,
+                                           const std::string segment_name) {
   std::string topic_name = ns_name + "/" + subject_name + "/" + segment_name;
   std::string key = subject_name + "/" + segment_name;
 
-  string msg = "Creating publisher for segment " + segment_name +
+  std::string msg = "Creating publisher for segment " + segment_name +
                " from subject " + subject_name;
-  cout << msg << endl;
+  std::cout << msg << std::endl;
 
   // create publisher
   boost::mutex::scoped_lock lock(mutex);

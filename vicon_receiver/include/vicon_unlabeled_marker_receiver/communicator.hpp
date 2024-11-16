@@ -2,7 +2,6 @@
 
 #include "DataStreamClient.h"
 #include "rclcpp/rclcpp.hpp"
-#include "vicon_unlabeled_marker_receiver/publisher.hpp"
 #include <boost/thread.hpp>
 #include <chrono>
 #include <iostream>
@@ -10,11 +9,13 @@
 #include <string>
 #include <unistd.h>
 #include <vector>
+#include <deque>
 #include <cmath>
 #include <algorithm>
 #include <limits>
 
-using namespace std;
+#include "vicon_unlabeled_marker_receiver/publisher.hpp"
+#include "utility/fixed_size_queue.hpp"
 
 namespace ViconReceiver {
 namespace UnlabeledMarker {
@@ -23,10 +24,10 @@ namespace UnlabeledMarker {
 class Communicator : public rclcpp::Node {
 private:
   ViconDataStreamSDK::CPP::Client vicon_client;
-  string hostname;
+  std::string hostname;
   unsigned int buffer_size;
-  string ns_name;
-  map<string, Publisher> pub_map;
+  std::string ns_name;
+  std::map<std::string, Publisher> pub_map;
   boost::mutex mutex;
 
   MarkersStruct previous_markers;
@@ -50,18 +51,25 @@ public:
   void get_frame();
 
   // functions to create a segment publisher in a new thread
-  void create_publisher(const string subject_name, const string segment_name);
-  void create_publisher_thread(const string subject_name,
-                               const string segment_name);
+  void create_publisher(const std::string subject_name, const std::string segment_name);
+  void create_publisher_thread(const std::string subject_name,
+                               const std::string segment_name);
 
   bool fetch_markers(MarkersStruct&);
-  int findMajorityElement(std::vector<std::size_t>& nums);
+
+  template <typename T>
+  std::size_t find_majority_element(const std::deque<T>&);
+
   inline double frame_delta_time(double& current_frame_time);
-  inline double calculateDistance(const std::vector<double>& a, const std::vector<double>& b);
-  std::vector<int> hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix);
-  std::pair<std::vector<std::pair<int, int>>, double> findOptimalAssignment(
+
+  inline double calculate_distance(const std::vector<double>& a, const std::vector<double>& b);
+
+  std::vector<std::size_t> hungarian_algorithm(const std::vector<std::vector<double>>& costMatrix);
+
+  std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> findOptimalAssignment(
     const MarkersStruct& current_marker,
-    const MarkersStruct& prev_marker); 
+    const MarkersStruct& prev_marker);
+
 };
 
 } // namespace UnlabeledMarker

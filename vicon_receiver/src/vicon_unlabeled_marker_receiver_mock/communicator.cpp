@@ -83,13 +83,13 @@ int Communicator::findMajorityElement(std::vector<std::size_t>& nums) {
 }
 
 // Calculate the time difference between two timecodes
-double Communicator::frame_delta_time(double current_frame_time){
+inline double Communicator::frame_delta_time(double& current_frame_time){
     double delta_time = 0.00f;
     delta_time = current_frame_time - Communicator::previous_frame_time;
     return delta_time;
 }
 
-double Communicator::calculateDistance(const std::vector<double>& a, const std::vector<double>& b) {
+inline double Communicator::calculateDistance(const std::vector<double>& a, const std::vector<double>& b) {
     return sqrt(pow(a[0] - b[0], 2) + pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2));
 }
 

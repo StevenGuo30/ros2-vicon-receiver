@@ -1,5 +1,4 @@
-#if !defined(COMMUNICATOR_HPP)
-#define COMMUNICATOR_HPP
+#pragma once
 
 #include "DataStreamClient.h"
 #include "rclcpp/rclcpp.hpp"
@@ -19,8 +18,6 @@ using namespace std;
 
 namespace ViconReceiver {
 namespace UnlabeledMarker {
-extern bool is_first_frame;
-extern std::vector<std::size_t> marker_count_total;
 
 // Main Node class
 class Communicator : public rclcpp::Node {
@@ -34,6 +31,9 @@ private:
 
   MarkersStruct previous_markers;
   double previous_frame_time = 0.0;
+  std::size_t marker_count;
+
+  bool flag_initialized = false;
 
 public:
 
@@ -54,18 +54,15 @@ public:
   void create_publisher_thread(const string subject_name,
                                const string segment_name);
 
+  bool fetch_markers(MarkersStruct&);
   int findMajorityElement(std::vector<std::size_t>& nums);
-  double frame_delta_time(double current_frame_time);
-  double calculateDistance(const std::vector<double>& a, const std::vector<double>& b);
+  inline double frame_delta_time(double& current_frame_time);
+  inline double calculateDistance(const std::vector<double>& a, const std::vector<double>& b);
   std::vector<int> hungarianAlgorithm(const std::vector<std::vector<double>>& costMatrix);
   std::pair<std::vector<std::pair<int, int>>, double> findOptimalAssignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker); 
-
-  MarkersStruct getPreviousMarkers();
 };
 
 } // namespace UnlabeledMarker
 } // namespace ViconReceiver
-
-#endif // COMMUNICATOR_HPP

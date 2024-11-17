@@ -58,7 +58,7 @@ public:
 
   auto fetch_markers(MarkersStruct&) -> double;
 
-  std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> find_optimal_assignment(
+  std::vector<std::pair<std::size_t, std::size_t>> find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker);
 

@@ -97,7 +97,7 @@ bool Communicator::disconnect() {
   return false;
 }
 
-std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator::find_optimal_assignment(
+std::vector<std::pair<std::size_t, std::size_t>> Communicator::find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker) {
 
@@ -117,7 +117,7 @@ std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator
     }
 
     // // Apply Hungarian Algorithm to find the optimal assignment
-    std::vector<std::size_t> assignment = Utility::Algorithm::hungarian_algorithm<double>(cost_matrix);
+    auto assignment = Utility::Algorithm::hungarian_algorithm<double>(cost_matrix);
 
     // Create the result as pairs of (current_marker index, prev_marker index)
     std::vector<std::pair<std::size_t, std::size_t>> result;
@@ -126,8 +126,9 @@ std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator
         result.emplace_back(i, assignment[i]);
         total_cost += cost_matrix[i][assignment[i]]; // Sum the cost for each assignment
     }
+    std::cout << "Total cost: " << total_cost << std::endl;
 
-    return std::make_pair(result, total_cost);
+    return result;
 }
 
 
@@ -184,8 +185,8 @@ void Communicator::get_frame() {
   double delta_time = (current_frame_time - Communicator::previous_frame_time) / 1000.0; // convert to seconds
   std::cout << "Delta time: " << delta_time << " ms" << std::endl;
 
-  auto [assignment, totalCost] = find_optimal_assignment(current_markers, Communicator::previous_markers);
-  std::cout << "Total cost: " << totalCost << std::endl;
+  auto assignment = find_optimal_assignment(current_markers, Communicator::previous_markers);
+  
   for (const auto& [current_idx, prev_idx] : assignment) {
     current_markers.vx[current_idx] = (current_markers.x[current_idx] - Communicator::previous_markers.x[prev_idx])/delta_time;
     current_markers.vy[current_idx] = (current_markers.y[current_idx] - Communicator::previous_markers.y[prev_idx])/delta_time;

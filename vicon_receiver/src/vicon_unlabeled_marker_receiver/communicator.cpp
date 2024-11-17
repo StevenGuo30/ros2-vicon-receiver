@@ -140,7 +140,7 @@ void Communicator::get_frame() {
   }
   if (!flag_initialized){
     // std::vector<std::size_t> marker_count_total;
-    Utility::FixedQueue<std::size_t, 120> marker_count_total;
+    Utility::DataStructure::FixedQueue<std::size_t, 120> marker_count_total;
 
     // Get first frame information
     std::size_t frame_number;
@@ -150,7 +150,7 @@ void Communicator::get_frame() {
       marker_count = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
       marker_count_total.emplace_back(marker_count);
     }
-    marker_count = find_majority_element(marker_count_total);
+    marker_count = Utility::Algorithm::find_majority_element(marker_count_total);
     if (marker_count == 0){
       std::cout << "Warning: Unlabeled Markers not found" << '\n';
       return; // Initialization failed

@@ -3,6 +3,9 @@
 #include <deque>
 #include <type_traits>
 
+namespace Utility {
+namespace Algorithm {
+
 template <typename Container>
 inline typename Container::value_type find_majority_element(const Container& nums) {
   typedef typename Container::value_type T;
@@ -38,3 +41,6 @@ inline typename Container::value_type find_majority_element(const Container& num
 
   return majority;
 }
+
+} // namespace Algorithm
+} // namespace Utility

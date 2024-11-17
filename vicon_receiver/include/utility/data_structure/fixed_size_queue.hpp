@@ -2,7 +2,8 @@
 
 #include <deque>
 
-namespace Utility{
+namespace Utility {
+namespace DataStructure {
 
 template <typename T, int MaxLen>
 class FixedQueue : public std::deque<T> {
@@ -44,4 +45,5 @@ public:
     }
 };
 
+}   // namespace DataStructure
 }   // namespace Utility

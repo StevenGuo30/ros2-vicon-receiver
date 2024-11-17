@@ -97,14 +97,14 @@ bool Communicator::disconnect() {
   return false;
 }
 
-std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator::find_optimal_assignment(
+std::vector<IndexPair> Communicator::find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker) {
 
     std::size_t n = current_marker.indices.size();
     std::size_t m = prev_marker.indices.size();
+    
     std::vector<std::vector<double>> cost_matrix(n, std::vector<double>(m));
-
     std::array<double, 3> current_marker_pos, prev_marker_pos;
 
     // Calculate the cost matrix
@@ -117,17 +117,18 @@ std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> Communicator
     }
 
     // // Apply Hungarian Algorithm to find the optimal assignment
-    std::vector<std::size_t> assignment = Utility::Algorithm::hungarian_algorithm<double>(cost_matrix);
+    auto assignment = Utility::Algorithm::hungarian_algorithm<double>(cost_matrix);
 
     // Create the result as pairs of (current_marker index, prev_marker index)
-    std::vector<std::pair<std::size_t, std::size_t>> result;
+    std::vector<IndexPair> result;
     double total_cost = 0;
     for (std::size_t i = 0; i < n; ++i) {
         result.emplace_back(i, assignment[i]);
         total_cost += cost_matrix[i][assignment[i]]; // Sum the cost for each assignment
     }
+    std::cout << "Total cost: " << total_cost << std::endl;
 
-    return std::make_pair(result, total_cost);
+    return result;
 }
 
 
@@ -140,7 +141,7 @@ void Communicator::get_frame() {
   }
   if (!flag_initialized){
     // std::vector<std::size_t> marker_count_total;
-    Utility::FixedQueue<std::size_t, 120> marker_count_total;
+    Utility::DataStructure::FixedQueue<std::size_t, 120> marker_count_total;
 
     // Get first frame information
     std::size_t frame_number;
@@ -150,7 +151,7 @@ void Communicator::get_frame() {
       marker_count = vicon_client.GetUnlabeledMarkerCount().MarkerCount;
       marker_count_total.emplace_back(marker_count);
     }
-    marker_count = find_majority_element(marker_count_total);
+    marker_count = Utility::Algorithm::find_majority_element(marker_count_total);
     if (marker_count == 0){
       std::cout << "Warning: Unlabeled Markers not found" << '\n';
       return; // Initialization failed
@@ -184,8 +185,8 @@ void Communicator::get_frame() {
   double delta_time = (current_frame_time - Communicator::previous_frame_time) / 1000.0; // convert to seconds
   std::cout << "Delta time: " << delta_time << " ms" << std::endl;
 
-  auto [assignment, totalCost] = find_optimal_assignment(current_markers, Communicator::previous_markers);
-  std::cout << "Total cost: " << totalCost << std::endl;
+  auto assignment = find_optimal_assignment(current_markers, Communicator::previous_markers);
+  
   for (const auto& [current_idx, prev_idx] : assignment) {
     current_markers.vx[current_idx] = (current_markers.x[current_idx] - Communicator::previous_markers.x[prev_idx])/delta_time;
     current_markers.vy[current_idx] = (current_markers.y[current_idx] - Communicator::previous_markers.y[prev_idx])/delta_time;

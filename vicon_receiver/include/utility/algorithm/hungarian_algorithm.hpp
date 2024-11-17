@@ -7,7 +7,7 @@
 namespace Utility {
 namespace Algorithm {
 
-template <typename T, typename Matrix = std::vector<std::vector<T>> >
+template <typename T, typename Matrix = std::vector<std::vector<T>> > // TODO: Make generic cost_matrix
 std::vector<std::size_t> hungarian_algorithm(const Matrix& cost_matrix) {
     static_assert(std::is_arithmetic<T>::value, "T must be arithmetic");
     // TODO: add assertion for 2D container

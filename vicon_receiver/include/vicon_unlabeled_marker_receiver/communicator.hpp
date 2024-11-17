@@ -21,6 +21,8 @@
 namespace ViconReceiver {
 namespace UnlabeledMarker {
 
+using IndexPair = std::pair<std::size_t, std::size_t>;
+
 // Main Node class
 class Communicator : public rclcpp::Node {
 private:
@@ -56,9 +58,13 @@ public:
   void create_publisher_thread(const std::string subject_name,
                                const std::string segment_name);
 
+  // function that fetch the marker position into marker struct.
+  // it returns the timestamp when the marker is returned.
+  // FIXME: the process hault until a "correct" number of markers are detected. (not sure if needed)
   auto fetch_markers(MarkersStruct&) -> double;
 
-  std::pair<std::vector<std::pair<std::size_t, std::size_t>>, double> find_optimal_assignment(
+  // find matching marker indices between two marker group.
+  std::vector<IndexPair> find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker);
 

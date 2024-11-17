@@ -97,14 +97,14 @@ bool Communicator::disconnect() {
   return false;
 }
 
-std::vector<std::pair<std::size_t, std::size_t>> Communicator::find_optimal_assignment(
+std::vector<IndexPair> Communicator::find_optimal_assignment(
     const MarkersStruct& current_marker,
     const MarkersStruct& prev_marker) {
 
     std::size_t n = current_marker.indices.size();
     std::size_t m = prev_marker.indices.size();
+    
     std::vector<std::vector<double>> cost_matrix(n, std::vector<double>(m));
-
     std::array<double, 3> current_marker_pos, prev_marker_pos;
 
     // Calculate the cost matrix
@@ -120,7 +120,7 @@ std::vector<std::pair<std::size_t, std::size_t>> Communicator::find_optimal_assi
     auto assignment = Utility::Algorithm::hungarian_algorithm<double>(cost_matrix);
 
     // Create the result as pairs of (current_marker index, prev_marker index)
-    std::vector<std::pair<std::size_t, std::size_t>> result;
+    std::vector<IndexPair> result;
     double total_cost = 0;
     for (std::size_t i = 0; i < n; ++i) {
         result.emplace_back(i, assignment[i]);

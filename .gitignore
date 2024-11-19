@@ -2,6 +2,7 @@
 *.swp
 .vscode/
 
+data/
 devel/
 logs/
 log/

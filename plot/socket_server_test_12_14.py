@@ -48,11 +48,14 @@ class MyServer:
                 y_str = np.array2string(y, separator=",")
                 z_str = np.array2string(z, separator=",")
                 message = f'{{"x": {x_str}, "y": {y_str}, "z": {z_str}}}\n'
-                socket.sendall(bytes(message, "utf-8"))
+                # socket.sendall(bytes(message, "utf-8"))
+                
+                socket.sendall(message.encode("utf-8"))
                 print(f"Sent data: {message}")
                 time.sleep(interval)
             except Exception as e:
                 print(f"Error sending data: {e}")
+                socket.close()
 
 
 if __name__ == "__main__":
@@ -64,6 +67,7 @@ if __name__ == "__main__":
         1
     )  # Listen for incoming connections，Here 1 means only one connection is allowed
     conn, addr = sock.accept()  # Accept a connection
+    sock.settimeout(None)
     print(f"Connected to {addr}")
     myserver = MyServer()
     try:

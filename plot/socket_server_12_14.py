@@ -4,6 +4,7 @@ from rclpy.node import Node
 from vicon_receiver.msg import MarkersList
 import threading
 import numpy as np
+import time
 
 
 class ros_socket_node(Node):
@@ -27,6 +28,7 @@ class ros_socket_node(Node):
             print(f"Server started at {Host}:{Port}")
             sock.listen(1)
             self.server, addr = sock.accept()
+            sock.settimeout(None)
             print(f"Connected to {addr}")
         except KeyboardInterrupt:
             self.server.close()
@@ -34,21 +36,33 @@ class ros_socket_node(Node):
             self.get_logger().info("KeyboardInterrupt received, shutting down.")
 
     def callback(self, msg):
-        if self.count % 100 == 0:  # downsample, send every 100th message
-            x = np.array(msg.x[0])
-            y = np.array(msg.y[0])
-            z = np.array(msg.z[0])
-            x_str = np.array2string(x, separator=",")
-            y_str = np.array2string(y, separator=",")
-            z_str = np.array2string(z, separator=",")
-            data = f'{{"x": {x_str}, "y": {y_str}, "z": {z_str}}}\n'
-            try:
-                self.server.sendall(data.encode("utf-8"))
-                self.get_logger().info(f"Sent data to socket: {data}")
-            except Exception as e:
-                self.get_logger().info(f"Error sending data to socket: {e}")
-        self.count = self.count % 100
-        self.count += 1
+        x = np.array(msg.x)
+        y = np.array(msg.y)
+        z = np.array(msg.z)
+        x_str = np.array2string(x, separator=",")
+        y_str = np.array2string(y, separator=",")
+        z_str = np.array2string(z, separator=",")
+        print(x_str)
+        print(y_str)
+        print(z_str)
+        message = f'{{"x": {x_str}, "y": {y_str}, "z": {z_str}}}||'
+        # try:
+        self.server.send(message.encode("utf-8"))
+        print(f"send {message}")
+        self.server.recv(1024)
+        print(f"recved")
+
+        self.get_logger().info(f"Sent data to socket: {message}")
+        # except Exception as e:
+        #     self.get_logger().info(f"Error sending data to socket: {e}")
+        #     self.get_logger().info(f"Received {message}")
+        #     raise Exception
+
+        # self.count = self.count % 1
+        # else:
+        #     self.server.sendall("tests".encode("utf-8"))
+        #     self.get_logger().info(f"Sent test data to socket")
+        # time.sleep(1)
 
 
 if __name__ == "__main__":
